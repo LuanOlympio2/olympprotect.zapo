@@ -1,0 +1,1610 @@
+{
+  "series": [
+    {
+      "id": 1,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "No seriado Chaves, quem mora na casa número 71 da vila?",
+      "answers": ["dona clotilde", "clotilde", "bruxa do 71", "a bruxa do 71", "senhora clotilde"],
+      "hint": "Também conhecida como Bruxa do 71."
+    },
+    {
+      "id": 2,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Breaking Bad, qual é o pseudônimo de Walter White no submundo das drogas?",
+      "answers": ["heisenberg"],
+      "hint": "Inspirado em um famoso físico alemão."
+    },
+    {
+      "id": 3,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Stranger Things, qual garota com poderes telecinéticos é apaixonada por waffles Eggo?",
+      "answers": ["eleven", "onze", "jane", "el"],
+      "hint": "Seu nome é um número em inglês."
+    },
+    {
+      "id": 4,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Game of Thrones, qual é o lema oficial da Casa Stark de Winterfell?",
+      "answers": ["o inverno esta chegando", "winter is coming", "o inverno vem ai", "inverno esta chegando"],
+      "hint": "Alerta sobre a estação mais fria e perigosa do ano."
+    },
+    {
+      "id": 5,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Todo Mundo Odeia o Chris, qual é o nome do melhor amigo branco do Chris?",
+      "answers": ["greg", "greg wuliger"],
+      "hint": "Ele adora quadrinhos e sempre sofre bullying junto."
+    },
+    {
+      "id": 6,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Na série The Walking Dead, qual é o nome do xerife protagonista das primeiras temporadas?",
+      "answers": ["rick grimes", "rick"],
+      "hint": "Usa um chapéu de xerife e um revólver Colt Python."
+    },
+    {
+      "id": 7,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Peaky Blinders, qual é o nome do líder frio e calculista da família Shelby?",
+      "answers": ["thomas shelby", "tommy shelby", "thomas", "tommy"],
+      "hint": "Interpretado pelo ator Cillian Murphy."
+    },
+    {
+      "id": 8,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em La Casa de Papel, qual é o codinome do mentor que planejou o assalto à Casa da Moeda?",
+      "answers": ["professor", "o professor", "sergio marquina", "salva"],
+      "hint": "Usa óculos e tem uma mente brilhante e meticulosa."
+    },
+    {
+      "id": 9,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em The Boys, qual é o nome do super-herói líder sádico dos Sete com poderes similares ao Superman?",
+      "answers": ["capitao patria", "homelander"],
+      "hint": "Usa capa com a bandeira dos Estados Unidos."
+    },
+    {
+      "id": 10,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Supernatural, quais são os primeiros nomes dos dois irmãos caçadores de monstros?",
+      "answers": ["sam e dean", "dean e sam", "irmaos winchester"],
+      "hint": "Eles viajam pelos EUA a bordo de um Chevy Impala 1967."
+    },
+    {
+      "id": 11,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Friends, qual é o nome da cafeteria onde os seis amigos sempre se reúnem?",
+      "answers": ["central perk"],
+      "hint": "Fica em Greenwich Village, Nova York."
+    },
+    {
+      "id": 12,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em The Office, qual é o nome do gerente regional cômico da filial da Dunder Mifflin Scranton?",
+      "answers": ["michael scott", "michael"],
+      "hint": "Interpretado brilhantemente por Steve Carell."
+    },
+    {
+      "id": 13,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Dark, qual é o nome da misteriosa cidade alemã onde ocorrem as viagens temporais?",
+      "answers": ["winden"],
+      "hint": "Possui uma enorme usina nuclear e uma caverna sombria."
+    },
+    {
+      "id": 14,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "No seriado Chaves, qual é o primeiro nome do Seu Madruga na dublagem e versão original?",
+      "answers": ["ramon", "don ramon"],
+      "hint": "Interpretado pelo inesquecível Ramón Valdés."
+    },
+    {
+      "id": 15,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Na série Lúcifer, qual é o nome da detetive de homicídios pela qual Lúcifer se apaixona?",
+      "answers": ["chloe decker", "chloe", "detetive decker"],
+      "hint": "Ela é a única humana que deixa Lúcifer vulnerável fisicamente."
+    },
+    {
+      "id": 16,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Grey's Anatomy, qual é o nome da médica cirurgiã protagonista interpretada por Ellen Pompeo?",
+      "answers": ["meredith grey", "meredith"],
+      "hint": "O nome da série foi inspirado no sobrenome dela."
+    },
+    {
+      "id": 17,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Na série Round 6 (Squid Game), qual é o número da jaqueta do jogador Seong Gi-hun?",
+      "answers": ["456"],
+      "hint": "É o último número da contagem de participantes."
+    },
+    {
+      "id": 18,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Vikings, qual é o lendário guerreiro nórdico que liderou os primeiros saques à Inglaterra?",
+      "answers": ["ragnar lothbrok", "ragnar"],
+      "hint": "Pai de Bjorn, Ivar, Ubbe e Hvitserk."
+    },
+    {
+      "id": 19,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Prison Break, qual engenheiro tatuou a planta do presídio no próprio corpo?",
+      "answers": ["michael scofield", "scofield", "michael"],
+      "hint": "Irmão de Lincoln Burrows."
+    },
+    {
+      "id": 20,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Na série The Last of Us, qual é o nome da jovem garota imune à infecção do Cordyceps?",
+      "answers": ["ellie", "ellie williams"],
+      "hint": "Ela é escoltada por Joel Miller através dos EUA."
+    },
+    {
+      "id": 21,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Wandinha (Wednesday), qual é o nome da mão viva decepada que é sua fiel companheira?",
+      "answers": ["maozinha", "coisa", "thing"],
+      "hint": "Faz parte da clássica Família Addams."
+    },
+    {
+      "id": 22,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Brooklyn Nine-Nine, qual detetive brilhante é obcecado pelo filme Duro de Matar?",
+      "answers": ["jake peralta", "peralta", "jake"],
+      "hint": "Casado com Amy Santiago."
+    },
+    {
+      "id": 23,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em How I Met Your Mother, qual é a palavra favorita de Barney Stinson para descrever algo incrível?",
+      "answers": ["legendario", "legendary", "legen dario"],
+      "hint": "'Legen... espere por isso...'"
+    },
+    {
+      "id": 24,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Doctor Who, qual é o nome da cabine telefônica policial azul que viaja pelo tempo?",
+      "answers": ["tardis"],
+      "hint": "É maior por dentro do que por fora."
+    },
+    {
+      "id": 25,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "No seriado Chaves, quantos meses de aluguel o Seu Madruga sempre deve para o Seu Barriga?",
+      "answers": ["14", "14 meses", "quatorze", "quatorze meses"],
+      "hint": "Ele nunca paga esse montante fixo de meses atrasados."
+    },
+    {
+      "id": 26,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Todo Mundo Odeia o Chris, qual é o nome do pai trabalhador que sabe o preço de tudo?",
+      "answers": ["julius", "julius rock"],
+      "hint": "'Você acha que eu estou brincando? Meu marido tem dois empregos!'"
+    },
+    {
+      "id": 27,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em The Big Bang Theory, qual palavra icônica Sheldon Cooper diz após pregar uma pegadinha?",
+      "answers": ["bazinga"],
+      "hint": "Começa com a letra B."
+    },
+    {
+      "id": 28,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Na série Dexter, qual é a especialidade forense de fachada de Dexter na polícia de Miami?",
+      "answers": ["analise de sangue", "sangue", "perito em sangue", "padrao de sangue", "manchas de sangue"],
+      "hint": "Ele examina os respingos deixados nas cenas de crime."
+    },
+    {
+      "id": 29,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Cobra Kai, qual é o nome do dojo de caratê reaberto por Johnny Lawrence?",
+      "answers": ["cobra kai"],
+      "hint": "'Sem compaixão!'"
+    },
+    {
+      "id": 30,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em WandaVision, qual bruxa ancestral se disfarçava de vizinha intrometida chamada Agnes?",
+      "answers": ["agatha harkness", "agatha"],
+      "hint": "'Foi a Agatha e mais ninguém!'"
+    },
+    {
+      "id": 31,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em House of the Dragon, qual é o nome do impiedoso príncipe rebelde tio de Rhaenyra?",
+      "answers": ["daemon targaryen", "daemon"],
+      "hint": "Monta o temível dragão vermelho Caraxes."
+    },
+    {
+      "id": 32,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Suits, qual é o grande segredo profissional que Mike Ross esconde?",
+      "answers": ["nao e advogado", "nao tem diploma", "nunca cursou harvard", "nao fez faculdade", "fraude"],
+      "hint": "Ele nunca se formou em direito em Harvard."
+    },
+    {
+      "id": 33,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em The Mandalorian, qual é a célebre frase-lema repetida pelo credo mandaloriano?",
+      "answers": ["este e o caminho", "this is the way"],
+      "hint": "Dita sempre que reafirmam seus votos e honra."
+    },
+    {
+      "id": 34,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Sex Education, qual é o nome do tímido protagonista que abre uma clínica na escola?",
+      "answers": ["otis milburn", "otis"],
+      "hint": "Filho da renomada terapeuta Jean Milburn."
+    },
+    {
+      "id": 35,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Na série Sherlock da BBC, qual é o famoso endereço residencial de Sherlock Holmes?",
+      "answers": ["221b baker street", "221 baker street", "baker street 221b"],
+      "hint": "Rua tradicional londrina no número 221B."
+    },
+    {
+      "id": 36,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Demolidor (Daredevil), qual é o nome civil do temido vilão Rei do Crime?",
+      "answers": ["wilson fisk", "fisk"],
+      "hint": "Controla a máfia de Hell's Kitchen."
+    },
+    {
+      "id": 37,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Narcos, qual ator brasileiro interpretou magistralmente o traficante Pablo Escobar?",
+      "answers": ["wagner moura"],
+      "hint": "Famoso também por Tropa de Elite."
+    },
+    {
+      "id": 38,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em The Boys, qual é o nome do soro químico azul criado pela Vought para criar super-heróis?",
+      "answers": ["composto v", "composto 5"],
+      "hint": "Representado pela letra V."
+    },
+    {
+      "id": 39,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Game of Thrones, qual é o nome do maior dragão negro montado por Daenerys Targaryen?",
+      "answers": ["drogon"],
+      "hint": "Batizado em homenagem a Khal Drogo."
+    },
+    {
+      "id": 40,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Smallville, qual minério esverdeado radioativo é a grande fraqueza de Clark Kent?",
+      "answers": ["criptonita", "kryptonita"],
+      "hint": "Fragmentos do seu planeta natal destruído."
+    },
+    {
+      "id": 41,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Black Mirror, qual objeto ou sistema as pessoas usam para avaliar interações em Nosedive?",
+      "answers": ["estrelas", "nota de 1 a 5", "sistema de pontos", "avaliacao"],
+      "hint": "Notas de 1 a 5 estrelas que ditam a posição social."
+    },
+    {
+      "id": 42,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Better Call Saul, qual é o verdadeiro nome civil do advogado antes de virar Saul Goodman?",
+      "answers": ["jimmy mcgill", "james mcgill", "jimmy"],
+      "hint": "Irmão mais novo do rigoroso Chuck McGill."
+    },
+    {
+      "id": 43,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Todo Mundo Odeia o Chris, qual é o nome da mãe linha-dura do Chris?",
+      "answers": ["rochelle", "rochelle rock"],
+      "hint": "'Eu não preciso disso, meu marido tem dois empregos!'"
+    },
+    {
+      "id": 44,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em The Walking Dead, qual arma branca japonesa com lâmina afiada é a marca de Michonne?",
+      "answers": ["katana", "espada samurai"],
+      "hint": "Espada tradicional de samurai."
+    },
+    {
+      "id": 45,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Stranger Things, qual criatura do Mundo Invertido tem a cabeça que se abre como uma flor carnívora?",
+      "answers": ["demogorgon"],
+      "hint": "Nome retirado do monstro clássico de Dungeons & Dragons."
+    },
+    {
+      "id": 46,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Peaky Blinders, em qual cidade industrial da Inglaterra a gangue foi fundada?",
+      "answers": ["birmingham"],
+      "hint": "Segunda cidade mais populosa do Reino Unido."
+    },
+    {
+      "id": 47,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "No seriado Chaves, qual é o lanche preferido que o Chaves sonha em comer a todo momento?",
+      "answers": ["sanduiche de presunto", "sanduiche"],
+      "hint": "Geralmente recheado com uma fatia de presunto."
+    },
+    {
+      "id": 48,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Sons of Anarchy, qual é o nome do jovem motociclista protagonista herdeiro do clube SAMCRO?",
+      "answers": ["jax teller", "jax", "jackson teller"],
+      "hint": "Filho de John Teller e Gemma."
+    },
+    {
+      "id": 49,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Lost, qual é a misteriosa sequência de 6 números jogada por Hurley na loteria?",
+      "answers": ["4 8 15 16 23 42", "4, 8, 15, 16, 23, 42", "4 8 15 16 23 e 42"],
+      "hint": "Começa com 4, 8, 15..."
+    },
+    {
+      "id": 50,
+      "category": "series",
+      "categoryName": "📺 Séries",
+      "question": "Em Euphoria, qual jovem atriz premiada estrela a série no papel de Rue Bennett?",
+      "answers": ["zendaya"],
+      "hint": "Famosa também por Homem-Aranha e Duna."
+    }
+  ],
+  "filmes": [
+    {
+      "id": 51,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Harry Potter, qual é o verdadeiro nome de nascimento do Lord Voldemort?",
+      "answers": ["tom riddle", "tom marvolo riddle", "tom servolo riddle"],
+      "hint": "Herdeiro de Salazar Sonserina."
+    },
+    {
+      "id": 52,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em O Senhor dos Anéis, qual criatura corrompida chama o Um Anel de 'Meu Precioso'?",
+      "answers": ["gollum", "smeagol"],
+      "hint": "Outrora era um hobbit do rio."
+    },
+    {
+      "id": 53,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Star Wars: O Império Contra-Ataca, qual verdade chocante Darth Vader revela a Luke?",
+      "answers": ["eu sou seu pai", "que e o pai dele", "que e seu pai", "e o pai dele", "sou seu pai"],
+      "hint": "Ele não matou o pai de Luke, ele É o pai."
+    },
+    {
+      "id": 54,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Vingadores: Guerra Infinita, quantas Joias do Infinito Thanos reúne na manopla?",
+      "answers": ["6", "seis"],
+      "hint": "Espaço, Mente, Realidade, Poder, Tempo e Alma."
+    },
+    {
+      "id": 55,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Titanic, qual é o nome do precioso colar com diamante azul em forma de coração?",
+      "answers": ["coracao do oceano", "o coracao do oceano", "heart of the ocean"],
+      "hint": "Pertenceu a Rose DeWitt Bukater."
+    },
+    {
+      "id": 56,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Matrix, qual é a cor da pílula que Neo escolhe tomar para acordar para a realidade?",
+      "answers": ["vermelha", "pilula vermelha"],
+      "hint": "A azul o deixaria continuar na ilusão."
+    },
+    {
+      "id": 57,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em O Rei Leão, qual é a expressão famosa em suaíli que ensina a viver sem preocupações?",
+      "answers": ["hakuna matata"],
+      "hint": "'É lindo dizer! Os seus problemas você deve esquecer!'"
+    },
+    {
+      "id": 58,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Shrek, qual animal tagarela se torna o companheiro inseparável do ogro?",
+      "answers": ["burro", "o burro", "donkey"],
+      "hint": "Adora fazer waffles pela manhã."
+    },
+    {
+      "id": 59,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em De Volta para o Futuro, qual é o modelo do carro esportivo transformado em máquina do tempo?",
+      "answers": ["delorean", "dmc delorean"],
+      "hint": "Possui portas asa de gaivota e carroceria de aço inoxidável."
+    },
+    {
+      "id": 60,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Batman: O Cavaleiro das Trevas (2008), qual ator faleceu antes de ganhar o Oscar pelo Coringa?",
+      "answers": ["heath ledger"],
+      "hint": "'Why so serious?'"
+    },
+    {
+      "id": 61,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Jurassic Park, de qual inseto preservado em âmbar os cientistas extraíram o DNA dos dinossauros?",
+      "answers": ["mosquito"],
+      "hint": "Sugava o sangue dos répteis gigantes no passado."
+    },
+    {
+      "id": 62,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Toy Story, qual é a famosa frase de voo espacial dita pelo patrulheiro Buzz Lightyear?",
+      "answers": ["ao infinito e alem", "para o infinito e alem"],
+      "hint": "Ele crê piamente que pode voar com ela."
+    },
+    {
+      "id": 63,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Gladiador, qual é o primeiro nome do general honrado que foi reduzido a gladiador?",
+      "answers": ["maximus", "maximus decimus meridius"],
+      "hint": "Interpretado pelo astro Russell Crowe."
+    },
+    {
+      "id": 64,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Piratas do Caribe, qual é o nome do navio pirata com velas pretas capitaneado por Jack Sparrow?",
+      "answers": ["perola negra", "black pearl"],
+      "hint": "O navio mais veloz dos sete mares."
+    },
+    {
+      "id": 65,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Interestelar, qual sentimento humano os personagens descobrem transcender espaço e tempo?",
+      "answers": ["amor"],
+      "hint": "Descrito por Brand como a única coisa que desafia as leis físicas."
+    },
+    {
+      "id": 66,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Jogos Vorazes, qual é o pássaro que se torna o símbolo da revolução liderada por Katniss?",
+      "answers": ["tordo", "mockingjay"],
+      "hint": "Híbrido de gaio-zombeteiro e fêmea de tordo."
+    },
+    {
+      "id": 67,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Velozes e Furiosos, qual elemento é considerado o mais sagrado por Dominic Toretto?",
+      "answers": ["familia", "a familia"],
+      "hint": "'Você não vira as costas para a...'"
+    },
+    {
+      "id": 68,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Clube da Luta, qual é a primeira e mais rígida regra do clube?",
+      "answers": ["nao falar sobre o clube da luta", "voce nao fala sobre o clube da luta", "nao fale sobre o clube da luta"],
+      "hint": "A segunda regra é exatamente idêntica à primeira."
+    },
+    {
+      "id": 69,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em O Poderoso Chefão, qual é o nome do patriarca Don Corleone vivido por Marlon Brando?",
+      "answers": ["vito corleone", "vito", "don vito"],
+      "hint": "'Vou fazer uma oferta que ele não poderá recusar.'"
+    },
+    {
+      "id": 70,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Homem-Aranha (2002), o que o Tio Ben ensina que acompanha 'grandes poderes'?",
+      "answers": ["grandes responsabilidades", "com grandes poderes vem grandes responsabilidades"],
+      "hint": "A lição que moldou toda a jornada do herói."
+    },
+    {
+      "id": 71,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Pantera Negra, qual é o metal fictício quase indestrutível que é fonte de poder de Wakanda?",
+      "answers": ["vibranium", "vibranio"],
+      "hint": "O escudo do Capitão América também é feito dele."
+    },
+    {
+      "id": 72,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Curtindo a Vida Adoidado, qual é o nome do jovem mestre em matar aula e se divertir?",
+      "answers": ["ferris bueller", "ferris"],
+      "hint": "Interpretado por Matthew Broderick nos anos 80."
+    },
+    {
+      "id": 73,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em O Silêncio dos Inocentes, qual é o nome do psiquiatra canibal vivido por Anthony Hopkins?",
+      "answers": ["hannibal lecter", "hannibal", "dr lecter"],
+      "hint": "Ajudou a agente Clarice Starling a desvendar crimes."
+    },
+    {
+      "id": 74,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em O Exterminador do Futuro 2, qual frase em espanhol o ciborgue T-800 diz antes de atirar?",
+      "answers": ["hasta la vista baby", "hasta la vista"],
+      "hint": "Expressão clássica de despedida."
+    },
+    {
+      "id": 75,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Indiana Jones: Os Caçadores da Arca Perdida, de qual animal o aventureiro tem pavor?",
+      "answers": ["cobras", "serpentes", "cobra"],
+      "hint": "'Cobras... por que tinham que ser cobras?'"
+    },
+    {
+      "id": 76,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Na saga Crepúsculo, qual é o sobrenome da família de vampiros que adota Edward?",
+      "answers": ["cullen"],
+      "hint": "Liderados pelo Dr. Carlisle e Esme."
+    },
+    {
+      "id": 77,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme John Wick, a morte de qual animal de estimação desperta a vingança imparável de John?",
+      "answers": ["cachorro", "cadela", "cao", "beagle", "cachorrinho"],
+      "hint": "Foi o último presente deixado por sua falecida esposa."
+    },
+    {
+      "id": 78,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Alien: O Oitavo Passageiro, qual é o sobrenome da heroína interpretada por Sigourney Weaver?",
+      "answers": ["ripley", "ellen ripley"],
+      "hint": "A única sobrevivente humana da nave Nostromo."
+    },
+    {
+      "id": 79,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Sexta-Feira 13, qual máscara esportiva é a marca registrada do assassino Jason Voorhees?",
+      "answers": ["mascara de hockey", "hockey", "mascara de hoquei"],
+      "hint": "Usada por goleiros no gelo."
+    },
+    {
+      "id": 80,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em A Hora do Pesadelo, qual é o nome do vilão de luva com garras que ataca durante o sono?",
+      "answers": ["freddy krueger", "freddy"],
+      "hint": "Usa um suéter listrado verde e vermelho."
+    },
+    {
+      "id": 81,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Na franquia Pânico (Scream), qual é o nome oficial da máscara usada pelos assassinos?",
+      "answers": ["ghostface"],
+      "hint": "Rosto branco fantasmagórico com boca esticada."
+    },
+    {
+      "id": 82,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em IT: A Coisa, qual é o nome do palhaço dançarino que aterroriza as crianças de Derry?",
+      "answers": ["pennywise", "a coisa"],
+      "hint": "Oferece balões vermelhos flutuantes nos bueiros."
+    },
+    {
+      "id": 83,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Bastardos Inglórios, qual é o apelido de caçador de nazistas do tenente Aldo Raine?",
+      "answers": ["aldo o apache", "o apache", "apache"],
+      "hint": "Personagem vivido por Brad Pitt."
+    },
+    {
+      "id": 84,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em De Volta para o Futuro, qual é o nome do cientista excêntrico amigo de Marty McFly?",
+      "answers": ["doc brown", "emmett brown", "doutor brown", "doc"],
+      "hint": "'1.21 Gigawatts?!'"
+    },
+    {
+      "id": 85,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Vingadores: Ultimato, qual herói se sacrifica usando as Joias para desintegrar Thanos?",
+      "answers": ["homem de ferro", "tony stark"],
+      "hint": "'E eu... sou... o Homem de Ferro.'"
+    },
+    {
+      "id": 86,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Harry Potter, qual é o número da plataforma secreta onde parte o Expresso de Hogwarts?",
+      "answers": ["9 3/4", "9 e tres quartos", "nove e tres quartos", "9 e 3/4"],
+      "hint": "Fica entre as plataformas 9 e 10 de King's Cross."
+    },
+    {
+      "id": 87,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Avatar de James Cameron, qual é o nome da lua exuberante e lar dos Na'vi?",
+      "answers": ["pandora"],
+      "hint": "Planeta repleto de florestas bioluminescentes."
+    },
+    {
+      "id": 88,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Kill Bill, qual é o codinome de assassina mortal da Noiva Beatrix Kiddo?",
+      "answers": ["mamba negra", "black mamba"],
+      "hint": "Inspirado na serpente mais letal da África."
+    },
+    {
+      "id": 89,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Os Fantasmas se Divertem, quantas vezes consecutivas se deve falar o nome Beetlejuice?",
+      "answers": ["3", "tres", "3 vezes", "tres vezes"],
+      "hint": "Dizer o nome três vezes o invoca instantaneamente."
+    },
+    {
+      "id": 90,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Barbie (2023), qual ator interpretou o boneco Ken com energia 'Kenergy'?",
+      "answers": ["ryan gosling"],
+      "hint": "Cantou a divertida música 'I'm Just Ken'."
+    },
+    {
+      "id": 91,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Oppenheimer, qual foi o codinome do projeto que desenvolveu a primeira bomba nuclear?",
+      "answers": ["projeto manhattan", "manhattan project", "manhattan"],
+      "hint": "Nome de um famoso distrito da cidade de Nova York."
+    },
+    {
+      "id": 92,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Top Gun, qual é o codinome de piloto de caça do Capitão Pete Mitchell vivido por Tom Cruise?",
+      "answers": ["maverick"],
+      "hint": "Significa rebelde ou pioneiro independente."
+    },
+    {
+      "id": 93,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Mad Max: Estrada da Fúria, qual guerreira sem braço lidera a rebelião contra Immortan Joe?",
+      "answers": ["furiosa", "imperatriz furiosa"],
+      "hint": "Interpretada magistralmente por Charlize Theron."
+    },
+    {
+      "id": 94,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Meninas Malvadas, qual cor de roupa as garotas do grupo 'As Poderosas' usam às quartas?",
+      "answers": ["rosa"],
+      "hint": "'Às quartas-feiras usamos...'"
+    },
+    {
+      "id": 95,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Carros da Pixar, qual é o nome do veloz e arrogante carro de corrida vermelho protagonista?",
+      "answers": ["relampago mcqueen", "mcqueen", "relampago marquinhos"],
+      "hint": "'Kachow!'"
+    },
+    {
+      "id": 96,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Monstros S.A., o que os monstros coletavam das crianças para gerar energia antes do riso?",
+      "answers": ["gritos", "grito", "sustos"],
+      "hint": "Eles assustavam as crianças nos quartos durante a noite."
+    },
+    {
+      "id": 97,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Procurando Nemo, em qual cidade australiana ficava o consultório do dentista onde Nemo estava?",
+      "answers": ["sydney"],
+      "hint": "'P. Sherman, 42 Wallaby Way...'"
+    },
+    {
+      "id": 98,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "No filme Coringa (2019), qual é o nome do comediante fracassado vivido por Joaquin Phoenix?",
+      "answers": ["arthur fleck", "arthur"],
+      "hint": "Cuidava de sua mãe Penny Fleck em Gotham."
+    },
+    {
+      "id": 99,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Up: Altas Aventuras, o que o idoso Carl prende na chaminé para fazer sua casa decolar?",
+      "answers": ["baloes", "bexigas", "baloes de gas"],
+      "hint": "Milhares deles cheios de gás hélio bem coloridos."
+    },
+    {
+      "id": 100,
+      "category": "filmes",
+      "categoryName": "🎬 Filmes",
+      "question": "Em Vingadores (2012), qual deus nórdico da trapaça liderou o exército Chitauri em Nova York?",
+      "answers": ["loki"],
+      "hint": "Irmão adotivo de Thor."
+    }
+  ],
+  "animes": [
+    {
+      "id": 101,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Naruto, qual é o nome da raposa demônio de nove caudas selada no protagonista?",
+      "answers": ["kurama", "kyuubi", "raposa de nove caudas"],
+      "hint": "Possui pelagem alaranjada e nove caudas flamejantes."
+    },
+    {
+      "id": 102,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em One Piece, qual Fruta do Diabo concedeu corpo elástico a Monkey D. Luffy?",
+      "answers": ["gomu gomu no mi", "fruta da borracha", "hito hito no mi"],
+      "hint": "Inicialmente conhecida como a fruta da borracha."
+    },
+    {
+      "id": 103,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Dragon Ball Z, qual guerreiro foi o primeiro a alcançar o nível de Super Saiyajin 2 contra Cell?",
+      "answers": ["gohan", "son gohan"],
+      "hint": "Filho primogênito de Son Goku."
+    },
+    {
+      "id": 104,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Death Note, qual fruta do mundo humano o Shinigami Ryuk é completamente viciado em comer?",
+      "answers": ["maca", "macas"],
+      "hint": "Geralmente vermelha, suculenta e doce."
+    },
+    {
+      "id": 105,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Attack on Titan (Shingeki no Kyojin), qual é o nome do jovem que jura exterminar todos os Titãs?",
+      "answers": ["eren yeager", "eren"],
+      "hint": "Possuidor original do Titã de Ataque."
+    },
+    {
+      "id": 106,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Demon Slayer, qual objeto vegetal Nezuko Kamado carrega amarrado em sua boca?",
+      "answers": ["bambu", "pedaco de bambu"],
+      "hint": "Serve para impedi-la de morder humanos com suas presas de oni."
+    },
+    {
+      "id": 107,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Jujutsu Kaisen, qual feiticeiro invencível usa uma venda nos olhos e domina o Infinito?",
+      "answers": ["satoru gojo", "gojo"],
+      "hint": "Possuidor dos lendários Seis Olhos."
+    },
+    {
+      "id": 108,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Hunter x Hunter, qual é o nome do garoto assassino de cabelos brancos melhor amigo de Gon?",
+      "answers": ["killua", "killua zoldyck"],
+      "hint": "Membro da lendária família de assassinos Zoldyck."
+    },
+    {
+      "id": 109,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Fullmetal Alchemist, quem os irmãos Elric tentaram reviver violando o tabu da transmutação humana?",
+      "answers": ["a mae", "sua mae", "mae", "trisha elric"],
+      "hint": "A saudade da matriarca levou à perda de seus corpos."
+    },
+    {
+      "id": 110,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em My Hero Academia, qual é o poder lendário transferido de All Might para Izuku Midoriya?",
+      "answers": ["one for all"],
+      "hint": "Oposto direto da individualidade All For One."
+    },
+    {
+      "id": 111,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Os Cavaleiros do Zodíaco, qual é a constelação da armadura de bronze de Seiya?",
+      "answers": ["pegaso", "pegasus"],
+      "hint": "O cavalo alado da mitologia grega."
+    },
+    {
+      "id": 112,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Bleach, qual é o nome da espada espiritual (Zanpakuto) de Ichigo Kurosaki?",
+      "answers": ["zangetsu"],
+      "hint": "Apresenta a forma de uma grande lâmina de cutelo negro."
+    },
+    {
+      "id": 113,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em One Piece, qual é o maior sonho de vida do espadachim Roronoa Zoro?",
+      "answers": ["melhor espadachim do mundo", "maior espadachim do mundo", "derrotar mihawk"],
+      "hint": "Superar o atual detentor do título, Dracule Mihawk."
+    },
+    {
+      "id": 114,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Dragon Ball, quantas Esferas do Dragão existem na Terra para invocar Shenlong?",
+      "answers": ["7", "sete"],
+      "hint": "Marcadas por estrelas de 1 a 7."
+    },
+    {
+      "id": 115,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Pokémon, qual foi o monstrinho elétrico inicial recebido por Ash Ketchum?",
+      "answers": ["pikachu"],
+      "hint": "Não gosta de ficar dentro de sua Pokébola."
+    },
+    {
+      "id": 116,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em One Punch Man, qual é o nome do herói calvo que destrói inimigos com apenas um golpe?",
+      "answers": ["saitama"],
+      "hint": "Fez 100 flexões, 100 abdominais, 100 agachamentos e correu 10km todos os dias."
+    },
+    {
+      "id": 117,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Naruto Shippuden, qual grupo de ninjas renegados usava mantos com nuvens vermelhas?",
+      "answers": ["akatsuki"],
+      "hint": "Buscava capturar todas as nove Bestas com Cauda."
+    },
+    {
+      "id": 118,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em JoJo's Bizarre Adventure, qual é o famoso grito de ataque de Jotaro Kujo e seu Star Platinum?",
+      "answers": ["ora ora ora", "ora ora", "ora"],
+      "hint": "Repetido centenas de vezes em alta velocidade."
+    },
+    {
+      "id": 119,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Chainsaw Man, qual é o nome do demônio motosserra canino que se fundiu com Denji?",
+      "answers": ["pochita"],
+      "hint": "Tem uma lâmina de serra elétrica saindo do focinho."
+    },
+    {
+      "id": 120,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Spy x Family, qual poder sobrenatural secreto a garotinha órfã Anya Forger possui?",
+      "answers": ["ler mentes", "telepatia", "leitura de mentes"],
+      "hint": "Ela sabe os segredos de Loid e Yor porque ouve seus pensamentos."
+    },
+    {
+      "id": 121,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Tokyo Ghoul, para qual cor o cabelo preto de Ken Kaneki mudou após ser torturado?",
+      "answers": ["branco"],
+      "hint": "Resultado do estresse e síndrome de Marie Antoinette."
+    },
+    {
+      "id": 122,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Yu-Gi-Oh!, qual é o monstro mágico de túnica roxa e chapéu cônico favorito de Yugi Muto?",
+      "answers": ["mago negro", "dark magician"],
+      "hint": "Tem 2500 pontos de ataque."
+    },
+    {
+      "id": 123,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Sword Art Online, qual é o apelido de Kirito por vestir sempre trajes pretos?",
+      "answers": ["espadachim negro", "the black swordsman"],
+      "hint": "Famoso por dominar a habilidade de empunhadura dupla."
+    },
+    {
+      "id": 124,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Digimon Adventure, qual é o monstrinho dinossauro laranja parceiro de Tai?",
+      "answers": ["agumon"],
+      "hint": "Digievolui para Greymon cuspindo fogo."
+    },
+    {
+      "id": 125,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Cavaleiros do Zodíaco, qual deusa da sabedoria e guerra justa é reencarnada em Saori Kido?",
+      "answers": ["atena", "athena"],
+      "hint": "Os cavaleiros protegem seu santuário na Grécia."
+    },
+    {
+      "id": 126,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Dragon Ball Z, qual vilão rosa e gordinho transformava guerreiros em biscoitos e chocolates?",
+      "answers": ["majin boo", "majin buu", "boo", "buu"],
+      "hint": "Criado pelo mago Bibidi e despertado por Babidi."
+    },
+    {
+      "id": 127,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Naruto, qual jutsu esférico espiral de chakra puro foi inventado pelo Quarto Hokage?",
+      "answers": ["rasengan"],
+      "hint": "Naruto aprendeu com Jiraiya e adicionou elemento vento nele."
+    },
+    {
+      "id": 128,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Attack on Titan, qual é o sobrenome do Capitão Levi, o soldado mais mortal da humanidade?",
+      "answers": ["ackerman", "levi ackerman"],
+      "hint": "Pertence ao mesmo clã formidável de Mikasa."
+    },
+    {
+      "id": 129,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Death Note, qual letra do alfabeto o misterioso maior detetive do mundo adota como codinome?",
+      "answers": ["l", "elle"],
+      "hint": "Dozeava letra do alfabeto."
+    },
+    {
+      "id": 130,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Jujutsu Kaisen, qual é o nome do temível Rei das Maldições de quatro braços que vive em Itadori?",
+      "answers": ["sukuna", "ryomen sukuna"],
+      "hint": "Yuji comeu seus dedos amaldiçoados."
+    },
+    {
+      "id": 131,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em One Piece, qual cozinheiro do bando luta exclusivamente com chutes para não machucar as mãos?",
+      "answers": ["sanji", "vinsmoke sanji"],
+      "hint": "Conhecido como Perna Negra."
+    },
+    {
+      "id": 132,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Os Sete Pecados Capitais, qual pecado capital é personificado pelo Capitão Meliodas?",
+      "answers": ["ira", "pecado da ira", "dragao da ira"],
+      "hint": "Tem a tatuagem de um dragão que morde a própria cauda."
+    },
+    {
+      "id": 133,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Black Clover, qual tipo especial de poder não-mágico Asta empunha em seu grimório?",
+      "answers": ["antimagia", "anti magia"],
+      "hint": "Anula e corta qualquer feitiço adversário."
+    },
+    {
+      "id": 134,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Cowboy Bebop, qual é o nome do caçador de recompensas espacial que luta Jeet Kune Do?",
+      "answers": ["spike spiegel", "spike"],
+      "hint": "Fuma cigarros e pilota a nave Swordfish II."
+    },
+    {
+      "id": 135,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Yu Yu Hakusho, qual é o golpe característico que Yusuke dispara pela ponta do dedo indicador?",
+      "answers": ["leigan", "rei gun", "raio espiritual"],
+      "hint": "Concentra energia espiritual como se fosse uma arma de fogo."
+    },
+    {
+      "id": 136,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Neon Genesis Evangelion, qual é o número da unidade roxa de EVA pilotada por Shinji Ikari?",
+      "answers": ["unidade 01", "eva 01", "01", "1"],
+      "hint": "Unidade que contém a alma de Yui Ikari."
+    },
+    {
+      "id": 137,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "No anime Inuyasha, qual é a joia mística despedaçada em vários fragmentos sagrados?",
+      "answers": ["joia de quatro almas", "shikon no tama"],
+      "hint": "Capaz de aumentar drasticamente o poder de humanos ou yokais."
+    },
+    {
+      "id": 138,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Sailor Moon, qual é o nome da gatinha guardiã preta com sinal de lua na testa?",
+      "answers": ["luna"],
+      "hint": "Despertou Serena Tsukino como guerreira da lua."
+    },
+    {
+      "id": 139,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Mob Psycho 100, qual porcentagem numérica no medidor faz Mob explodir seus poderes psíquicos?",
+      "answers": ["100", "100%", "cem", "cem por cento"],
+      "hint": "Está presente no próprio título da obra."
+    },
+    {
+      "id": 140,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Pokémon, qual dupla de vilões desastrados da Equipe Rocket é acompanhada por um Meowth falante?",
+      "answers": ["jessie e james", "james e jessie"],
+      "hint": "'Para proteger o mundo da devastação...'"
+    },
+    {
+      "id": 141,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Naruto, qual é o nome do irmão mais velho de Sasuke que assassinou o clã Uchiha?",
+      "answers": ["itachi", "itachi uchiha"],
+      "hint": "Mestre supremo do Mangekyou Sharingan e Tsukuyomi."
+    },
+    {
+      "id": 142,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Dragon Ball Z, qual filho de Vegeta viajou no tempo com uma espada para avisar sobre os androides?",
+      "answers": ["trunks", "trunks do futuro"],
+      "hint": "Cortou Freeza em vários pedaços."
+    },
+    {
+      "id": 143,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em One Piece, qual foi o primeiro navio caravelado dos Chapéus de Palha presenteado por Kaya?",
+      "answers": ["going merry", "merry"],
+      "hint": "Tinha a carranca em formato de cabeça de carneiro."
+    },
+    {
+      "id": 144,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em My Hero Academia, qual é o apelido de infância dado por Deku ao explosivo Katsuki Bakugo?",
+      "answers": ["kacchan"],
+      "hint": "Pronúncia infantil afetuosa que irrita Bakugo."
+    },
+    {
+      "id": 145,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Demon Slayer, qual elemento da respiração original foi ensinado a Tanjiro pelo mestre Urokodaki?",
+      "answers": ["agua", "respiraçao da agua", "respiracao da agua"],
+      "hint": "Movimentos fluídos e cortantes como ondas do mar."
+    },
+    {
+      "id": 146,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Bleach, qual é o nome do segundo e supremo estágio de liberação de poder de uma Zanpakuto?",
+      "answers": ["bankai"],
+      "hint": "O primeiro estágio é o Shikai."
+    },
+    {
+      "id": 147,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Hunter x Hunter, qual palhaço mágico sádico usa cartas de baralho e goma elástica (Bungee Gum)?",
+      "answers": ["hisoka", "hisoka morow"],
+      "hint": "Tem sede insaciável de lutar com adversários fortes."
+    },
+    {
+      "id": 148,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Fullmetal Alchemist, qual membro mecânico e de qual lado Edward Elric perdeu para fixar a alma do irmão?",
+      "answers": ["braco direito", "o braco direito", "braco"],
+      "hint": "Sacrificou seu braço direito; a perna esquerda já havia sido levada antes."
+    },
+    {
+      "id": 149,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em Naruto, qual dos Três Sannins Lendários é o escritor tarado dos livros da série Icha Icha?",
+      "answers": ["jiraiya", "ero sennin"],
+      "hint": "Invocador dos grandes sapos do Monte Myoboku."
+    },
+    {
+      "id": 150,
+      "category": "animes",
+      "categoryName": "🎌 Animes",
+      "question": "Em One Piece, qual é a quantia em Berries da primeira recompensa dada por Luffy após derrotar Arlong?",
+      "answers": ["30 milhoes", "30000000", "30.000.000", "trinta milhoes"],
+      "hint": "Foi o maior valor inicial já registrado no East Blue."
+    }
+  ],
+  "desenhos": [
+    {
+      "id": 151,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Ben 10, qual é o nome do relógio alienígena que permite a Ben se transformar em heróis extraterrestres?",
+      "answers": ["omnitrix"],
+      "hint": "Criado pelo brilhante cientista Azmuth."
+    },
+    {
+      "id": 152,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Bob Esponja, qual é a receita secreta que o vilão Plankton vive tentando roubar do Siri Cascudo?",
+      "answers": ["hamburguer de siri", "formula do hamburguer de siri", "formula secreta"],
+      "hint": "O prato mais saboroso e vendido de toda a Fenda do Biquíni."
+    },
+    {
+      "id": 153,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "No clássico desenho Pica-Pau, qual é o nome do abutre golpista de cartola e paletó preto?",
+      "answers": ["zeca urubu"],
+      "hint": "'Você disse... comida grátis?'"
+    },
+    {
+      "id": 154,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Na clássica animação Tom e Jerry, qual dos dois é o gato cinza da dupla?",
+      "answers": ["tom"],
+      "hint": "O ratinho esperto e marrom se chama Jerry."
+    },
+    {
+      "id": 155,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Scooby-Doo, qual petisco especial convence Scooby e Salsicha a enfrentarem qualquer monstro?",
+      "answers": ["biscoito scooby", "biscoitos scooby", "scooby snacks"],
+      "hint": "'Você faria isso por um Biscoito Scooby?'"
+    },
+    {
+      "id": 156,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Simpsons, qual é a marca de cerveja favorita consumida por Homer no Bar do Moe?",
+      "answers": ["duff", "cerveja duff"],
+      "hint": "Tem até um parque temático com o mascote Duffman."
+    },
+    {
+      "id": 157,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Hora de Aventura, qual é a espécie e poder especial do fiel companheiro Jake?",
+      "answers": ["cachorro magico", "cachorro", "metamorfo", "muda de forma", "esticar"],
+      "hint": "Um cão amarelo capaz de esticar e transformar seu corpo em qualquer forma."
+    },
+    {
+      "id": 158,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Apenas um Show (Regular Show), que animais são os zeladores Mordecai e Rigby?",
+      "answers": ["gaio azul e guaxinim", "passaro e guaxinim", "guaxinim e gaio azul"],
+      "hint": "Um pássaro azul e um guaxinim marrom preguiçoso."
+    },
+    {
+      "id": 159,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em O Incrível Mundo de Gumball, qual bichinho de estimação ganhou pernas e virou irmão adotivo de Gumball?",
+      "answers": ["darwin", "peixe", "peixinho dourado", "peixe dourado"],
+      "hint": "Um simpático peixinho laranja com sapatos verdes."
+    },
+    {
+      "id": 160,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Gravity Falls, qual é o nome do demônio triangular amarelo caótico que usa cartola e gravata?",
+      "answers": ["bill cipher", "bill"],
+      "hint": "Tem um único olho no centro do corpo piramidal."
+    },
+    {
+      "id": 161,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Jovens Titãs, qual heroína gótica de capa roxa é filha do demônio soberano Trigon?",
+      "answers": ["ravena", "raven"],
+      "hint": "'Azarath Metrion Zinthos!'"
+    },
+    {
+      "id": 162,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em As Meninas Superpoderosas, qual substância química acidental caiu na mistura de açúcar e tempero?",
+      "answers": ["elemento x"],
+      "hint": "Derrubado pelo cotovelo do Professor Utônio."
+    },
+    {
+      "id": 163,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Coragem, o Cão Covarde, qual é o nome do lugar desolado no meio do deserto onde vive a família?",
+      "answers": ["lugar nenhum", "nowhere"],
+      "hint": "Onde coisas bizarras acontecem e dependem de Coragem."
+    },
+    {
+      "id": 164,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Phineas e Ferb, qual é o codinome de agente secreto do ornitorrinco Perry?",
+      "answers": ["agente p", "perry o ornitorrinco", "perry"],
+      "hint": "Trabalha para a agência secreta liderada pelo Major Monograma."
+    },
+    {
+      "id": 165,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Steven Universo, qual gema rosa encravada no umbigo Steven herdou de sua mãe?",
+      "answers": ["quartzo rosa", "diamante rosa", "rosa"],
+      "hint": "Pertenceu à líder das Crystal Gems, Rose Quartz."
+    },
+    {
+      "id": 166,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Padrinhos Mágicos, quais são os nomes das duas fadas madrinhas casadas de Timmy Turner?",
+      "answers": ["cosmo e wanda", "wanda e cosmo"],
+      "hint": "Um de cabelo verde trapalhão e a outra de cabelo rosa sensata."
+    },
+    {
+      "id": 167,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Avatar: A Lenda de Aang, qual é o nome do bisão voador de seis patas companheiro de Aang?",
+      "answers": ["appa"],
+      "hint": "'Yip-yip!'"
+    },
+    {
+      "id": 168,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Danny Phantom, de que cor ficam os cabelos e olhos de Danny quando ele ativa seus poderes de fantasma?",
+      "answers": ["cabelo branco e olhos verdes", "branco e verde", "cabelos brancos"],
+      "hint": "'Ele é um fantasma... Danny Phantom!'"
+    },
+    {
+      "id": 169,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em O Laboratório de Dexter, qual é o nome da irmã bailarina que adora apertar todos os botões?",
+      "answers": ["dee dee", "didi"],
+      "hint": "'O que faz esse botão?'"
+    },
+    {
+      "id": 170,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Johnny Bravo, qual acessório moderno o galã musculoso nunca retira do rosto nem para dormir?",
+      "answers": ["oculos escuros", "oculos de sol", "oculos"],
+      "hint": "Lentes escuras pretas que escondem seus olhos."
+    },
+    {
+      "id": 171,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Du, Dudu e Edu, qual é a guloseima gigante redonda que os três garotos tentam comprar com 25 centavos?",
+      "answers": ["bala de caramelo", "quebra queixo", "bala"],
+      "hint": "Doces esféricos imensos que deformam as bochechas dos personagens."
+    },
+    {
+      "id": 172,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em As Terríveis Aventuras de Billy e Mandy, quem é o Ceifador sinistro que virou escravo das crianças?",
+      "answers": ["puro osso", "morte", "grim"],
+      "hint": "Fala com sotaque jamaicano no original e carrega uma foice mágica."
+    },
+    {
+      "id": 173,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em A Mansão Foster para Amigos Imaginários, qual é o nome do amigo azul mimado criado por Mac?",
+      "answers": ["bloo", "blooregard", "blooregard q kazoo"],
+      "hint": "Formato de gota azul, egocêntrico e travesso."
+    },
+    {
+      "id": 174,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Kim Possible, que animalzinho sem pelos cor-de-rosa vive no bolso de Ron Stoppable?",
+      "answers": ["rufus", "rato toupeira pelado", "toupeira"],
+      "hint": "Adora comer nos restaurantes Buena Nacho."
+    },
+    {
+      "id": 175,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Três Espiãs Demais, quais são os primeiros nomes das três espiãs da WOOHP?",
+      "answers": ["sam, clover e alex", "clover, sam e alex", "alex, sam e clover", "sam clover alex"],
+      "hint": "A ruiva inteligente, a loira vaidosa e a morena esportista."
+    },
+    {
+      "id": 176,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Na Turma da Mônica, qual é o bichinho de pelúcia azul que o Cebolinha sempre tenta roubar da Mônica?",
+      "answers": ["sansao"],
+      "hint": "Coelhinho azul que ela gira para dar coelhadas nos meninos."
+    },
+    {
+      "id": 177,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em DuckTales, quais são os nomes dos três patinhos sobrinhos trigêmeos do Pato Donald?",
+      "answers": ["huguinho, zezinho e luisinho", "huguinho zezinho luisinho"],
+      "hint": "Vestem roupas vermelha, azul e verde."
+    },
+    {
+      "id": 178,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em He-Man, qual é a fortaleza mística guardada pela Feiticeira que concede forças a Eternia?",
+      "answers": ["castelo de grayskull", "grayskull"],
+      "hint": "'Pelos poderes de Grayskull! Eu tenho a força!'"
+    },
+    {
+      "id": 179,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em ThunderCats, qual é a espada mística lendária empunhada por Lion-O?",
+      "answers": ["espada justiceira"],
+      "hint": "Guarda o poderoso Olho de Thundera."
+    },
+    {
+      "id": 180,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Caverna do Dragão, qual ancião baixinho de manto vermelho guia os jovens com charadas enigmáticas?",
+      "answers": ["mestre dos magos", "dungeon master"],
+      "hint": "Aparece e desaparece sem nunca levá-los diretamente para casa."
+    },
+    {
+      "id": 181,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em As Tartarugas Ninja, qual é o alimento italiano de massa e queijo que elas devoram no esgoto?",
+      "answers": ["pizza"],
+      "hint": "Pedem entregas com bordas recheadas e coberturas inusitadas."
+    },
+    {
+      "id": 182,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "No desenho do Garfield, qual é a comida predileta do gato preguiçoso que odeia segundas-feiras?",
+      "answers": ["lasanha"],
+      "hint": "Massa italiana em camadas com muito molho e queijo derretido."
+    },
+    {
+      "id": 183,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Peanuts, qual é o nome do cãozinho preto e branco filósofo dono de Charlie Brown?",
+      "answers": ["snoopy"],
+      "hint": "Dorme no teto de sua casinha vermelha."
+    },
+    {
+      "id": 184,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Looney Tunes, qual é o bordão característico que o Pernalonga diz enquanto come cenoura?",
+      "answers": ["o que e que ha velhinho", "o que que ha velhinho", "eh o que que ha velhinho"],
+      "hint": "'What's up, doc?'"
+    },
+    {
+      "id": 185,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Flintstones, qual animal jurássico de estimação faz o papel de cachorro da casa de Fred?",
+      "answers": ["dino", "dinossauro"],
+      "hint": "Late, abana o rabo e pula em cima de Fred quando ele chega."
+    },
+    {
+      "id": 186,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Bob Esponja, qual instrumento musical de madeira e palheta Lula Molusco toca desafinadamente?",
+      "answers": ["clarinete", "clarineta"],
+      "hint": "Instrumento de sopro da família das madeiras."
+    },
+    {
+      "id": 187,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Ben 10, qual alienígena velocista azul e preto corre a velocidades hipersônicas sobre rodas nos pés?",
+      "answers": ["xlr8"],
+      "hint": "Seu nome em inglês soa como a palavra 'accelerate'."
+    },
+    {
+      "id": 188,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Padrinhos Mágicos, qual professor tem tiques nervosos e desconfia da existência de fadas?",
+      "answers": ["denzel crocker", "crocker", "sr crocker"],
+      "hint": "Dá notas F para todo mundo e tem uma orelha no pescoço."
+    },
+    {
+      "id": 189,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em As Meninas Superpoderosas, qual macaco inteligente com turbante é o maior arqui-inimigo da cidade?",
+      "answers": ["macaco louco", "mojo jojo"],
+      "hint": "Costumava ser o assistente de laboratório do Professor."
+    },
+    {
+      "id": 190,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Gravity Falls, qual número está estampado na mão dourada do diário secreto que Dipper encontra?",
+      "answers": ["3", "tres", "numero 3"],
+      "hint": "O autor misterioso escreveu três diários."
+    },
+    {
+      "id": 191,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Jovens Titãs, de qual planeta alienígena distante se originou a princesa Estelar?",
+      "answers": ["tamaran"],
+      "hint": "Habitado por seres com pele alaranjada e poderes solares."
+    },
+    {
+      "id": 192,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "No desenho Pica-Pau, qual é o nome do vizinho sueco barrigudo que sempre se estressa com o pássaro?",
+      "answers": ["leoncio"],
+      "hint": "Usa bigode branco, suspensórios e sotaque característico."
+    },
+    {
+      "id": 193,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "No clássico desenho Popeye, qual vegetal verde em conserva o marinheiro come para ganhar superforça?",
+      "answers": ["espinafre"],
+      "hint": "Abre a lata apertando-a com uma mão e engole de uma vez."
+    },
+    {
+      "id": 194,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Inspector Bugiganga, qual frase de comando ativa os equipamentos robóticos do detetive?",
+      "answers": ["go go gadget", "bugiganga", "vai vai bugiganga"],
+      "hint": "'Go, Go...'"
+    },
+    {
+      "id": 195,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em A Pantera Cor-de-Rosa, qual instrumento de sopro de jazz toca a inconfundível melodia tema?",
+      "answers": ["saxofone", "sax"],
+      "hint": "Instrumento metálico dourado com bocal de palheta."
+    },
+    {
+      "id": 196,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Os Padrinhos Mágicos, qual é o nome do bebê mágico com chocalho filho de Cosmo e Wanda?",
+      "answers": ["poof"],
+      "hint": "Sua única palavra é 'Poof!' e ele flutua como uma bolinha lilás."
+    },
+    {
+      "id": 197,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Apenas um Show, que máquina de chicletes nervosa gerencia o parque e ameaça demitir os zeladores?",
+      "answers": ["benson"],
+      "hint": "'Mordecai e Rigby, limpem essa bagunça agora ou estão DEMITIDOS!'"
+    },
+    {
+      "id": 198,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Na Turma da Mônica, qual é o maior pavor e pesadelo de infância do personagem Cascão?",
+      "answers": ["agua", "tomar banho", "banho", "chuva"],
+      "hint": "Ele foge desesperadamente de torneiras, poças e sabão."
+    },
+    {
+      "id": 199,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Hora de Aventura, qual objeto amaldiçoado transformou o arqueólogo Simon no insano Rei Gelado?",
+      "answers": ["coroa", "coroa magica", "coroa de gelo"],
+      "hint": "Uma coroa dourada com três rubis encantados."
+    },
+    {
+      "id": 200,
+      "category": "desenhos",
+      "categoryName": "🎨 Desenhos",
+      "question": "Em Scooby-Doo, qual é o nome pintado na van colorida utilizada pelos jovens detetives?",
+      "answers": ["maquina do misterio", "mystery machine"],
+      "hint": "Pintada de azul e verde com flores psicodélicas alaranjadas."
+    }
+  ]
+}

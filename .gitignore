@@ -1,0 +1,37 @@
+# Dependências
+node_modules/
+
+# Autenticação e Sessão WhatsApp
+auth_info_baileys/*
+!auth_info_baileys/.gitkeep
+test_auth/
+baileys_store_multi.json
+
+# Arquivos de Configuração e Chaves Privadas
+config.json
+apis.json
+mercadopago.json
+apis.txt
+cookies.txt
+
+# Caches e Mapeamentos
+dados/cache_grupos.json
+dados/cache/*.json
+!dados/cache/.gitkeep
+
+# Logs e Inspetor de Tráfego
+*.log
+dados/logs/
+
+# Arquivos Temporários
+temp/*
+!temp/.gitkeep
+*.tmp
+deno.lock
+
+# Sistema Operacional e Editores
+.DS_Store
+Thumbs.db
+.sixth/
+.vscode/
+.idea/

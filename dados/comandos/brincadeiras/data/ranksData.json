@@ -1,0 +1,436 @@
+{
+  "rankgado": {
+    "title": "🐄 *Rank dos Mais Gados do Grupo*",
+    "header": "Essas são as pessoas mais gadas do grupo:",
+    "comments": [
+      "muito gado, que isso",
+      "já comprou presente para o cachorro dela",
+      "baba nas fotos de bom dia",
+      "gado moderado, mas ainda tem salvação",
+      "iniciante na arte da gadice"
+    ]
+  },
+  "rankgada": {
+    "title": "🐄 *Rank das Mais Gadas do Grupo*",
+    "header": "Essas são as mulheres mais gadas do grupo:",
+    "comments": [
+      "apaixonadíssima, não disfarça",
+      "responde na velocidade da luz",
+      "manda áudio longo para o contatinho",
+      "planejou o futuro na primeira conversa",
+      "coração de manteiga derretida"
+    ]
+  },
+  "rankcorno": {
+    "title": "🐂 *Rank dos Mais Cornos do Grupo*",
+    "header": "Essas são as maiores galhas detectadas no grupo:",
+    "comments": [
+      "o teto do quarto já arranhou",
+      "não passa na porta sem abaixar a cabeça",
+      "último a saber, como manda o costume",
+      "desconfia mas aceita o café",
+      "chifre é só um adereço da vida"
+    ]
+  },
+  "rankcorna": {
+    "title": "👑 *Rank das Mais Cornas do Grupo*",
+    "header": "Essas são as rainhas do chifre do grupo:",
+    "comments": [
+      "ele está apenas ocupado, confia",
+      "o sexto sentido avisou mas ela ignorou",
+      "tiara brilhante na cabeça",
+      "perdoa até o que não viu",
+      "plena e coroada"
+    ]
+  },
+  "ranknazista": {
+    "title": "💀 *Rank Nazista do Grupo*",
+    "header": "Vibrações do grupo:",
+    "template": "{nome} tem uma vibe de {level}% que não rola muito bem aqui! 💀"
+  },
+  "rankgay": {
+    "title": "🌈 *Rank dos Mais Gays do Grupo*",
+    "header": "Essas são as pessoas mais radiantes do grupo:",
+    "comments": [
+      "irradiando puro brilho e orgulho",
+      "marcando presença por onde passa",
+      "o arco íris oficial da turma",
+      "estilo e representatividade em alta",
+      "entregando entretenimento e carisma"
+    ]
+  },
+  "ranklesbica": {
+    "title": "🌈 *Rank das Mais Lésbicas do Grupo*",
+    "header": "As mulheres mais autênticas do grupo:",
+    "comments": [
+      "mulher de muita atitude",
+      "rainha da representatividade",
+      "coração livre e apaixonante",
+      "cheia de estilo e firmeza",
+      "pura energia e liderança"
+    ]
+  },
+  "rankgostoso": {
+    "title": "🔥 *Rank dos Mais Gostosos do Grupo*",
+    "header": "Esses são os mais admirados do grupo:",
+    "comments": [
+      "monumento em forma de pessoa",
+      "chamando atenção de todo mundo",
+      "colírio para os olhos de geral",
+      "quebrando corações pela rodinha",
+      "pura presença concentrada"
+    ]
+  },
+  "rankgostosa": {
+    "title": "🔥 *Rank das Mais Gostosas do Grupo*",
+    "header": "As musas do grupo:",
+    "comments": [
+      "obra de arte que desfila",
+      "beleza entre meros mortais",
+      "arrancando suspiros de todo mundo",
+      "beleza e atitude num nível alto",
+      "simplesmente marcante"
+    ]
+  },
+  "ranklinda": {
+    "title": "💎 *Rank das Mais Lindas do Grupo*",
+    "header": "As belezas mais encantadoras do grupo:",
+    "comments": [
+      "beleza pura sem precisar de efeito",
+      "sorriso que anima qualquer dia",
+      "doçura e elegância no visual",
+      "brilha muito naturalmente",
+      "um verdadeiro encanto de pessoa"
+    ]
+  },
+  "rankbrabo": {
+    "title": "😤 *Rank dos Mais Brabos do Grupo*",
+    "header": "Os mais invocados do grupo:",
+    "comments": [
+      "melhor não encarar nos olhos",
+      "nervos firmes e pouca paciência",
+      "peita qualquer bronca na hora",
+      "brabeza pura sem filtro",
+      "respeita a postura do homem"
+    ]
+  },
+  "rankbraba": {
+    "title": "🔥 *Rank das Mais Brabas do Grupo*",
+    "header": "Mulheres que não levam desaforo para casa:",
+    "comments": [
+      "mexeu com ela, mexeu com problema",
+      "autoridade e postura firme",
+      "comanda tudo com voz firme",
+      "ninguém tem coragem de retrucar",
+      "a leoa do grupo"
+    ]
+  },
+  "rankburro": {
+    "title": "🐴 *Rank dos Mais Burros do Grupo*",
+    "header": "O medidor de asnice do grupo:",
+    "comments": [
+      "procurou o celular com ele na mão",
+      "errou o caminho de casa",
+      "nem desenhando consegue entender",
+      "a mente em modo economia de energia",
+      "gente boa, mas o raciocínio tirou folga"
+    ]
+  },
+  "rankburra": {
+    "title": "🦄 *Rank das Mais Loiras do Grupo*",
+    "header": "A inocência e lerdeza do grupo:",
+    "comments": [
+      "pensou bastante para responder um oi",
+      "vive no próprio mundinho tranquilo",
+      "compensando a confusão com carisma",
+      "uma querida, mas o raciocínio é lento",
+      "confundiu as estações do ano"
+    ]
+  },
+  "rankinteligente": {
+    "title": "🧠 *Rank dos Mais Inteligentes do Grupo*",
+    "header": "As mentes brilhantes do grupo:",
+    "comments": [
+      "inteligência alta, ensina qualquer um",
+      "raciocínio rápido como um raio",
+      "resolve qualquer parada com calma",
+      "leitor atento e cheio de argumentos",
+      "conhecimento puro da turma"
+    ]
+  },
+  "rankotaku": {
+    "title": "🎌 *Rank dos Maiores Otakus do Grupo*",
+    "header": "A galera dos animes do grupo:",
+    "comments": [
+      "já assistiu dezenas de temporadas",
+      "fala termos em japonês no meio da conversa",
+      "sabe a história de todos os personagens",
+      "sonha em viajar para o Japão",
+      "não perde um episódio por nada"
+    ]
+  },
+  "rankfiel": {
+    "title": "💍 *Rank dos Mais Fiéis do Grupo*",
+    "header": "Os exemplos de lealdade do grupo:",
+    "comments": [
+      "mais fiel que cão de guarda",
+      "nem olha para os lados na rua",
+      "coração guardado com carinho",
+      "parceria para todas as horas",
+      "exemplo de compromisso sincero"
+    ]
+  },
+  "rankinfiel": {
+    "title": "💔 *Rank dos Mais Infiéis do Grupo*",
+    "header": "Os maiores perigos para relacionamentos:",
+    "comments": [
+      "coração grande, cabe todo mundo",
+      "tem um contatinho para cada ocasião",
+      "o celular vibra e já esconde",
+      "pula a cerca sem pensar duas vezes",
+      "sem vergonha declarado"
+    ]
+  },
+  "rankrico": {
+    "title": "💰 *Rank dos Mais Ricos do Grupo*",
+    "header": "Os mais prósperos do grupo:",
+    "comments": [
+      "tranquilidade financeira absoluta",
+      "só consome coisas de primeira linha",
+      "o limite do cartão nem treme",
+      "vai pagar o lanche da rodinha",
+      "vida de verdadeiro patrão"
+    ]
+  },
+  "rankrica": {
+    "title": "💎 *Rank das Mais Ricas do Grupo*",
+    "header": "As mulheres com vida de luxo:",
+    "comments": [
+      "perfume fino e presença marcante",
+      "passa o cartão sem olhar a fatura",
+      "trabalha e investe com categoria",
+      "vida de madame estabelecida",
+      "independência financeira no topo"
+    ]
+  },
+  "rankpobre": {
+    "title": "💸 *Rank dos Mais Pobres do Grupo*",
+    "header": "A tropa do aperto financeiro:",
+    "comments": [
+      "junta as moedas para o pão",
+      "o saldo do banco pede socorro",
+      "coloca água no frasco para render",
+      "muito rico em carisma e histórias",
+      "precisando de uma ajuda com urgência"
+    ]
+  },
+  "rankforte": {
+    "title": "💪 *Rank dos Mais Fortes do Grupo*",
+    "header": "Os mais fortes e resistentes:",
+    "comments": [
+      "ergue peso sem fazer cara feia",
+      "força bruta e determinação",
+      "aguenta qualquer tranco da rotina",
+      "físico de quem treina pesado",
+      "resistência acima da média"
+    ]
+  },
+  "rankpegador": {
+    "title": "💘 *Rank dos Maiores Pegadores do Grupo*",
+    "header": "Os mestres da conquista do grupo:",
+    "comments": [
+      "lista de contatos bem movimentada",
+      "conversa afinada para qualquer papo",
+      "arruma pretendente em qualquer lugar",
+      "um olhar e já cria afinidade",
+      "o terror da vida de solteiro"
+    ]
+  },
+  "rankpegadora": {
+    "title": "💘 *Rank das Maiores Pegadoras do Grupo*",
+    "header": "As mulheres fatais da conquista:",
+    "comments": [
+      "coleciona admiradores por onde passa",
+      "domina a arte de encantar",
+      "só escolhe quem passa no critério",
+      "presença marcante que não passa batida",
+      "arrasa corações com facilidade"
+    ]
+  },
+  "rankmacho": {
+    "title": "👊 *Rank dos Machos Alfa do Grupo*",
+    "header": "A turma da postura firme:",
+    "comments": [
+      "firmeza pura nas palavras",
+      "homem que sustenta a palavra",
+      "postura respeitosa e imponente",
+      "atitude direta sem rodeios",
+      "firmeza da cabeça aos pés"
+    ]
+  },
+  "rankmalandro": {
+    "title": "🎲 *Rank dos Mais Malandros do Grupo*",
+    "header": "A turma do jogo de cintura:",
+    "comments": [
+      "sabe todas as saídas das enrascadas",
+      "quando não ganha empata com folga",
+      "jogo de cintura admirável",
+      "desenrola qualquer conversa enrolada",
+      "o mestre do improviso rápido"
+    ]
+  },
+  "rankmalandra": {
+    "title": "😎 *Rank das Mais Malandras do Grupo*",
+    "header": "As rainhas da esperteza do grupo:",
+    "comments": [
+      "já percebeu tudo antes de falarem",
+      "esperteza que desarma qualquer um",
+      "sabe conduzir qualquer situação",
+      "visão rápida e mente esperta",
+      "dona do próprio ritmo"
+    ]
+  },
+  "ranknerd": {
+    "title": "🤓 *Rank dos Maiores Nerds do Grupo*",
+    "header": "Os mestres dos assuntos avançados:",
+    "comments": [
+      "lê o manual com muita atenção",
+      "resolve qualquer dúvida de computador",
+      "entende de teorias e histórias longas",
+      "passa horas focado no que gosta",
+      "mente curiosa que sempre aprende"
+    ]
+  },
+  "ranktrabalhador": {
+    "title": "🔨 *Rank dos Mais Trabalhadores do Grupo*",
+    "header": "Os guerreiros da lida diária:",
+    "comments": [
+      "acorda cedo e não reclama da lida",
+      "dedicação constante no trabalho",
+      "responsabilidade e esforço no corre",
+      "guerreiro que corre atrás do pão",
+      "merece todo o reconhecimento"
+    ]
+  },
+  "ranktrabalhadora": {
+    "title": "💼 *Rank das Mais Trabalhadoras do Grupo*",
+    "header": "As mulheres batalhadoras do grupo:",
+    "comments": [
+      "faz várias tarefas com muita competência",
+      "futuro brilhante construído no esforço",
+      "dedicação admirável em tudo o que faz",
+      "não tem preguiça para correr atrás",
+      "exemplo de garra para todos"
+    ]
+  },
+  "rankengracado": {
+    "title": "😂 *Rank dos Mais Engraçados do Grupo*",
+    "header": "Os piadistas oficiais da turma:",
+    "comments": [
+      "arranca risadas até nos dias difíceis",
+      "comediante pronto para fazer rir",
+      "tem tirada rápida para qualquer assunto",
+      "anima a conversa em qualquer momento",
+      "alegria pura da rodinha"
+    ]
+  },
+  "rankengracada": {
+    "title": "😂 *Rank das Mais Engraçadas do Grupo*",
+    "header": "As mulheres bem humoradas do grupo:",
+    "comments": [
+      "manda as melhores mensagens cômicas",
+      "risada gostosa que contagia a todos",
+      "a alma divertida de qualquer conversa",
+      "humor leve e muito rápido",
+      "ninguém fica sério perto dela"
+    ]
+  },
+  "rankcharmoso": {
+    "title": "✨ *Rank dos Mais Charmosos do Grupo*",
+    "header": "Os mestres da elegância do grupo:",
+    "comments": [
+      "elegância visível nos detalhes",
+      "olhar calmo e marcante",
+      "voz tranquila e educada",
+      "porte fino em qualquer ambiente",
+      "agradável por natureza"
+    ]
+  },
+  "rankcharmosa": {
+    "title": "✨ *Rank das Mais Charmosas do Grupo*",
+    "header": "As mulheres cheias de encanto do grupo:",
+    "comments": [
+      "postura delicada e olhar simpático",
+      "conquista as pessoas com um sorriso",
+      "charme natural sem forçar nada",
+      "impossível não admirar o jeito dela",
+      "elegância pura no dia a dia"
+    ]
+  },
+  "rankvisionario": {
+    "title": "🔮 *Rank dos Maiores Visionários do Grupo*",
+    "header": "As mentes que olham para o futuro:",
+    "comments": [
+      "enxerga oportunidades onde ninguém vê",
+      "sempre pensando anos à frente",
+      "ideias boas que trazem melhorias",
+      "estrategista sereno nas escolhas",
+      "visão apurada de longo alcance"
+    ]
+  },
+  "rankvisionaria": {
+    "title": "🔮 *Rank das Maiores Visionárias do Grupo*",
+    "header": "As mulheres visionárias da turma:",
+    "comments": [
+      "intuição precisa para planos e projetos",
+      "percebe as tendências com facilidade",
+      "mente inovadora e muito ativa",
+      "transforma planos simples em conquistas",
+      "liderança e clareza no pensar"
+    ]
+  },
+  "rankpoderoso": {
+    "title": "⚡ *Rank dos Mais Poderosos do Grupo*",
+    "header": "Os membros de maior presença do grupo:",
+    "comments": [
+      "presença forte que impõe respeito",
+      "firmeza e autoridade no que fala",
+      "influência serena e respeitada",
+      "admirado por todos da comunidade",
+      "o ponto de equilíbrio do grupo"
+    ]
+  },
+  "rankpoderosa": {
+    "title": "⚡ *Rank das Mais Poderosas do Grupo*",
+    "header": "As mulheres de maior autoridade e presença:",
+    "comments": [
+      "chega com firmeza e resolve os assuntos",
+      "soberana e segura de si mesma",
+      "força e atitude combinadas",
+      "inspiração de firmeza para os outros",
+      "presença marcante em qualquer lugar"
+    ]
+  },
+  "rankvencedor": {
+    "title": "🏆 *Rank dos Maiores Vencedores do Grupo*",
+    "header": "Os campeões de conquistas do grupo:",
+    "comments": [
+      "colecionador de vitórias na vida",
+      "não se abala e sempre dá a volta por cima",
+      "nascido para brilhar nos objetivos",
+      "firmeza de campeão no dia a dia",
+      "o topo do pódio é o lugar dele"
+    ]
+  },
+  "rankvencedora": {
+    "title": "🏆 *Rank das Maiores Vencedoras do Grupo*",
+    "header": "As mulheres vitoriosas do grupo:",
+    "comments": [
+      "supera qualquer desafio com calma",
+      "vitoriosa nas lutas do dia a dia",
+      "brilha no topo pelo próprio esforço",
+      "guerreira e batalhadora nata",
+      "o troféu da vida é todinho dela"
+    ]
+  }
+}
