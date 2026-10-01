@@ -1,12 +1,10 @@
 // creditos Olympio
-const patchBaileys = require('./dados/funções/patchBaileys');
-patchBaileys();
 const connectToWhatsApp = require('./connect');
 const cleanTempFolder = require('./cleaner');
+
 async function startBot() {
     try {
-        console.log("[INIT] Inicializando sistema...");
-        patchBaileys();
+        console.log("[INIT] Inicializando sistema OlympProtect com Zapo...");
         cleanTempFolder();
         setInterval(cleanTempFolder, 60 * 60 * 1000);
         await connectToWhatsApp();
@@ -14,4 +12,5 @@ async function startBot() {
         console.error("[ERRO FATAL] Ocorreu um erro no index principal:", error);
     }
 }
+
 startBot();

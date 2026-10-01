@@ -1,5 +1,5 @@
 // creditos Olympio
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const { writeExif } = require('../../funções/autofigUtils');
 
 const aliases = ['rename', 'renomear', 'rn', 'roubar'];

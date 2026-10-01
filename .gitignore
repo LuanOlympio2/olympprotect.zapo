@@ -2,6 +2,10 @@
 node_modules/
 
 # Autenticação e Sessão WhatsApp
+auth_zapo/*
+!auth_zapo/.gitkeep
+*.sqlite
+*.sqlite-journal
 auth_info_baileys/*
 !auth_info_baileys/.gitkeep
 test_auth/
@@ -19,7 +23,7 @@ dados/cache_grupos.json
 dados/cache/*.json
 !dados/cache/.gitkeep
 
-# Logs e Inspetor de Tráfego
+# Logs
 *.log
 dados/logs/
 

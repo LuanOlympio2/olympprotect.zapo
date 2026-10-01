@@ -1,5 +1,5 @@
 // creditos Olympio
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const fs = require('fs-extra');

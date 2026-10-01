@@ -1,5 +1,4 @@
 // creditos Olympio
-const { generateWAMessageFromContent } = require('baileys');
 async function sendPaymentStyledText(conn, jid, text, mentionedJid = [], requestFrom = null, quoted = null) {
     const botJid = (conn.user?.id || '').split(':')[0] + '@s.whatsapp.net';
     const contextInfo = {
@@ -30,14 +29,12 @@ async function sendPaymentStyledText(conn, jid, text, mentionedJid = [], request
             expiryTimestamp: Math.floor(Date.now() / 1000) + 86400
         }
     };
-    const waMessage = await generateWAMessageFromContent(jid, paymentObject, {
-        userJid: conn.user?.id || botJid
-    });
-    await conn.relayMessage(jid, waMessage.message, {
-        messageId: waMessage.key.id
-    });
-    return waMessage;
+    if (conn.rawClient) {
+        return await conn.rawClient.message.send(jid, paymentObject);
+    }
+    return await conn.sendMessage(jid, paymentObject);
 }
+
 module.exports = {
     sendPaymentStyledText,
     sendPaymentMessage: sendPaymentStyledText

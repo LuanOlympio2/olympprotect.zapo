@@ -1,7 +1,7 @@
 // creditos Olympio
 const fs = require('fs-extra');
 const path = require('path');
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const Grupo = require('../../modelos/grupos');
 const { isUserAdmin } = require('../../funções/normalizarid');
 const groupCache = require('../../funções/groupCache');

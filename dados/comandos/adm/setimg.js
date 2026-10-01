@@ -1,5 +1,5 @@
 // creditos Olympio
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const { isUserAdmin, isBotAdmin } = require('../../funções/normalizarid');
 module.exports = {
     name: 'setimg',

@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
-const { getContentType } = require('baileys');
+const { getContentType } = require('zapo-js');
 const Usuario = require('../modelos/Usuario.js');
 const Grupo = require('../modelos/grupos');
 const BotConfig = require('../modelos/BotConfig');
@@ -444,7 +444,7 @@ async function mensagensHandler(conn, m, config) {
             }
             if (grupoConfig.autotranscrever && msg.message.audioMessage && !isCommand) {
                 try {
-                    const { downloadContentFromMessage } = require('baileys');
+                    const { downloadContentFromMessage } = require('../funções/mediaUtils');
                     const { transcreverAudioBuffer } = require('../funções/transcricao');
                     const stream = await downloadContentFromMessage(msg.message.audioMessage, 'audio');
                     let buffer = Buffer.from([]);

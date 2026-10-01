@@ -13,9 +13,9 @@
     "@distube/ytdl-core": "^4.16.12",
     "@google/generative-ai": "^0.24.1",
     "@tobyg74/tiktok-api-dl": "^1.1.4",
+    "@zapo-js/store-sqlite": "^1.3.0",
     "akinator-client": "^1.3.0",
     "axios": "*",
-    "baileys": "6.7.16",
     "btch-downloader": "^5.0.4",
     "fluent-ffmpeg": "*",
     "fs-extra": "*",
@@ -31,7 +31,8 @@
     "snapsave-media-downloader": "^2.4.1",
     "ultra-igdl": "^1.0.3",
     "wa-sticker-formatter": "*",
-    "yt-search": "^2.13.1"
+    "yt-search": "^2.13.1",
+    "zapo-js": "^1.9.0"
   },
   "overrides": {
     "axios": "*",

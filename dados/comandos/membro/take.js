@@ -1,5 +1,5 @@
 // creditos Olympio
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const fs = require('fs-extra');
 const path = require('path');
 const { normalizeId } = require('../../funções/normalizarid');

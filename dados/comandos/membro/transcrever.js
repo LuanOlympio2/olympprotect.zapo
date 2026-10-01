@@ -27,7 +27,7 @@ async function run(conn, msg, config, args, sender, senderName) {
 
         let downloadContentFromMessage = null;
         try {
-            downloadContentFromMessage = require('baileys').downloadContentFromMessage;
+            downloadContentFromMessage = require('../../funções/mediaUtils').downloadContentFromMessage;
         } catch (_) {
             downloadContentFromMessage = null;
         }

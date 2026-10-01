@@ -1,6 +1,6 @@
 // creditos Olympio
 const { findParticipant, isUserAdmin } = require('../../funções/normalizarid');
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const aliases = ['totag', 'hidetag', 'cita'];
 const downloadMedia = async (message, type) => {
     try {

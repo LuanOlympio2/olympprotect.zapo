@@ -1,5 +1,5 @@
 // creditos Olympio
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('./mediaUtils');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs-extra');
 const path = require('path');

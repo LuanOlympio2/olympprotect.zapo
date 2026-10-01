@@ -1,17 +1,17 @@
 # OlympProtect - Bot de WhatsApp
 
-Bot de segurança e gerenciamento para WhatsApp utilizando a biblioteca Baileys.
+Bot de segurança e gerenciamento para WhatsApp de alta performance utilizando a biblioteca **Zapo** (`zapo-js`) com persistência em SQLite.
 
 ## Funcionalidades
-- Gerenciamento de grupos
-- Sistema de proteção avançado
-- Integrações de Inteligência Artificial
-- Sistema de cobrança automatizada com Mercado Pago
-- Envio de mídias e figurinhas
+- Gerenciamento e moderação de grupos
+- Sistema de proteção avançado (Anti-Spam, Anti-PG, Anti-Link, Anti-Fake, Anti-Nuke, X9)
+- Sistema completo de RPG e minigames
+- Integrações com Inteligência Artificial
+- Envio de mídias, áudios, vídeos e figurinhas
 - Mensagens personalizadas de entrada e saída com imagem
 
 ## Requisitos
-- Node.js versão 18 ou superior
+- Node.js versão 20.9.0 ou superior
 - FFmpeg instalado no sistema
 - Executável yt-dlp na pasta principal do projeto
 

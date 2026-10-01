@@ -1,5 +1,5 @@
 // creditos Olympio
-const { downloadContentFromMessage } = require('baileys');
+const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const { isUserAdmin } = require('../../funções/normalizarid');
 const aliases = ['revelar', 'reveal', 'ver'];
 async function run(conn, msg, config, args, sender, senderName) {
