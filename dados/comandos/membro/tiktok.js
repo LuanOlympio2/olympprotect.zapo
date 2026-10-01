@@ -65,7 +65,7 @@ module.exports = {
             });
 
             await conn.sendMessage(from, {
-                video: await fs.readFile(outputPath),
+                video: Buffer.from(response.data),
                 caption: card,
                 gifPlayback: false
             }, { quoted: msg });

@@ -1,7 +1,7 @@
 // creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const { isUserAdmin, isBotAdmin } = require('../../funções/normalizarid');
-const aliases = ['antifoto', 'antiimage'];
+const aliases = ['antifoto', 'antiimage', 'antiimg'];
 async function run(conn, msg, config, args, sender, senderName) {
     const from = msg.key.remoteJid;
     if (!from.endsWith('@g.us')) {
