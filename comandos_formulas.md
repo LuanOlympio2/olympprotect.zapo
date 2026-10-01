@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 📚 Guia de Comandos: Cases e Fórmulas de Funcionamento
 
 Este documento contém a estrutura de código (`case` / módulo) e a fórmula detalhada de funcionamento para os 11 comandos solicitados.
