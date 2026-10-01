@@ -1,4 +1,7 @@
 // creditos Olympio
+if (!globalThis.WebSocket) {
+    globalThis.WebSocket = require('ws');
+}
 const connectToWhatsApp = require('./connect');
 const cleanTempFolder = require('./cleaner');
 

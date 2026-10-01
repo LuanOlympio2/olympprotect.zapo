@@ -7,6 +7,7 @@ async function cleanTempFolder() {
         console.log(`[CLEANER] Iniciando limpeza da pasta temp...`);
         await fs.ensureDir(tempDir);
         await fs.emptyDir(tempDir);
+        await fs.writeFile(path.join(tempDir, '.gitkeep'), '');
         console.log(`[CLEANER] Pasta temp limpa com sucesso.`);
     } catch (error) {
         console.error(`[CLEANER] Erro ao limpar pasta temp:`, error);

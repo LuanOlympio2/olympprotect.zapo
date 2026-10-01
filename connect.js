@@ -1,4 +1,7 @@
 // creditos Olympio
+if (!globalThis.WebSocket) {
+    globalThis.WebSocket = require('ws');
+}
 const readline = require("readline");
 const path = require('path');
 const qrcode = require('qrcode-terminal');
