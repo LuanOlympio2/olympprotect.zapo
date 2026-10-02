@@ -309,7 +309,7 @@ async function safeSendMenu(conn, from, text, msg, mentions = [], options = {}) 
     }
     const cleanMentions = sanitizeMentions(rawMentions);
 
-    if (options.withImage) {
+    if (options.withImage !== false) {
         const img = getMenuImage();
         if (img) {
             try {

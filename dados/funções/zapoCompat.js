@@ -34,11 +34,21 @@ function createZapoAdapter(client) {
             } else if (content.text) {
                 sendPayload = { type: 'text', text: content.text, contextInfo };
             } else if (content.image) {
+                let mime = content.mimetype;
+                if (!mime) {
+                    if (Buffer.isBuffer(content.image) && content.image[0] === 0x89) {
+                        mime = 'image/png';
+                    } else if (typeof content.image === 'string' && content.image.endsWith('.png')) {
+                        mime = 'image/png';
+                    } else {
+                        mime = 'image/jpeg';
+                    }
+                }
                 sendPayload = {
                     type: 'image',
                     media: content.image,
                     caption: content.caption || '',
-                    mimetype: content.mimetype || 'image/jpeg',
+                    mimetype: mime,
                     contextInfo
                 };
             } else if (content.video) {
