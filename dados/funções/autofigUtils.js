@@ -98,7 +98,7 @@ async function videoToSticker(inputBuffer, options = {}) {
         let quality = 40;
         let fps = 15;
         let maxDuration = 8;
-        const scale = 'scale=512:512:force_original_aspect_ratio=decrease,format=rgba,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=0x00000000';
+        const scale = 'scale=512:512:force_original_aspect_ratio=increase,crop=512:512';
 
         let outBuffer = null;
         for (let attempt = 0; attempt < 3; attempt++) {
@@ -144,8 +144,8 @@ async function imageToSticker(inputBuffer, options = {}) {
     try {
         webpBuffer = await sharp(inputBuffer)
             .resize(512, 512, {
-                fit: 'contain',
-                background: { r: 0, g: 0, b: 0, alpha: 0 }
+                fit: 'cover',
+                position: 'center'
             })
             .webp({ quality: 80 })
             .toBuffer();
@@ -159,7 +159,7 @@ async function imageToSticker(inputBuffer, options = {}) {
         try {
             await new Promise((resolve, reject) => {
                 ffmpeg(inputPath)
-                    .videoFilter('scale=512:512:force_original_aspect_ratio=decrease,format=rgba,pad=512:512:(ow-iw)/2:(oh-ih)/2:color=0x00000000')
+                    .videoFilter('scale=512:512:force_original_aspect_ratio=increase,crop=512:512')
                     .outputOptions(['-f webp', '-quality 80'])
                     .save(outputPath)
                     .on('end', resolve)

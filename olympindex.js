@@ -4,6 +4,15 @@ if (!globalThis.WebSocket) {
 }
 const connectToWhatsApp = require('./connect');
 const cleanTempFolder = require('./cleaner');
+const fs = require('fs');
+const path = require('path');
+
+const localYtdlp = path.join(__dirname, 'yt-dlp');
+if (fs.existsSync(localYtdlp)) {
+    try {
+        fs.chmodSync(localYtdlp, 0o755);
+    } catch (_) {}
+}
 
 async function startBot() {
     try {

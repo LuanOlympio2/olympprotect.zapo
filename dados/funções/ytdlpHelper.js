@@ -10,6 +10,9 @@ function getYtDlpBinary() {
     const rootDir = process.cwd();
     const localLinux = path.join(rootDir, 'yt-dlp');
     if (fs.existsSync(localLinux)) {
+        try {
+            fs.chmodSync(localLinux, 0o755);
+        } catch (_) {}
         return localLinux;
     }
     const localWindows = path.join(rootDir, 'yt-dlp.exe');
@@ -17,6 +20,20 @@ function getYtDlpBinary() {
         return localWindows;
     }
     return 'yt-dlp';
+}
+
+async function runYtDlp(args, timeout = 120000) {
+    const bin = getYtDlpBinary();
+    try {
+        return await execPromise(`"${bin}" ${args}`, { timeout });
+    } catch (err) {
+        if (bin !== 'yt-dlp') {
+            try {
+                return await execPromise(`yt-dlp ${args}`, { timeout });
+            } catch (_) {}
+        }
+        throw err;
+    }
 }
 
 function getCookiesArg() {
@@ -37,14 +54,13 @@ function getJsRuntimeArg() {
 }
 
 async function downloadAudio(query, outputPath) {
-    const bin = getYtDlpBinary();
     const cookies = getCookiesArg();
     const jsRuntime = getJsRuntimeArg();
     const isUrl = /((https?:\/\/)|(www\.))[^\s]+/.test(query);
 
     if (isUrl) {
-        const cmd = `"${bin}" -x --audio-format mp3 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${query}"`;
-        await execPromise(cmd, { timeout: 120000 });
+        const cmd = `-x --audio-format mp3 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${query}"`;
+        await runYtDlp(cmd, 120000);
         if (fs.existsSync(outputPath)) {
             return {
                 title: 'Áudio Baixado',
@@ -65,8 +81,8 @@ async function downloadAudio(query, outputPath) {
     for (const candidate of candidates) {
         try {
             if (candidate.seconds > 900) continue;
-            const cmd = `"${bin}" -x --audio-format mp3 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${candidate.url}"`;
-            await execPromise(cmd, { timeout: 90000 });
+            const cmd = `-x --audio-format mp3 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${candidate.url}"`;
+            await runYtDlp(cmd, 90000);
             if (fs.existsSync(outputPath)) {
                 return {
                     title: candidate.title,
@@ -78,8 +94,8 @@ async function downloadAudio(query, outputPath) {
     }
 
     const soundcloudQuery = `scsearch1:${query}`;
-    const scCmd = `"${bin}" -x --audio-format mp3 --no-playlist --force-overwrites ${cookies} -o "${outputPath}" "${soundcloudQuery}"`;
-    await execPromise(scCmd, { timeout: 90000 });
+    const scCmd = `-x --audio-format mp3 --no-playlist --force-overwrites ${cookies} -o "${outputPath}" "${soundcloudQuery}"`;
+    await runYtDlp(scCmd, 90000);
 
     if (fs.existsSync(outputPath)) {
         return {
@@ -93,14 +109,13 @@ async function downloadAudio(query, outputPath) {
 }
 
 async function downloadVideo(query, outputPath) {
-    const bin = getYtDlpBinary();
     const cookies = getCookiesArg();
     const jsRuntime = getJsRuntimeArg();
     const isUrl = /((https?:\/\/)|(www\.))[^\s]+/.test(query);
 
     if (isUrl) {
-        const cmd = `"${bin}" -f "bv*+ba/b" --merge-output-format mp4 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${query}"`;
-        await execPromise(cmd, { timeout: 180000 });
+        const cmd = `-f "bv*+ba/b" --merge-output-format mp4 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${query}"`;
+        await runYtDlp(cmd, 180000);
         if (fs.existsSync(outputPath)) {
             return {
                 title: 'Vídeo Baixado',
@@ -120,8 +135,8 @@ async function downloadVideo(query, outputPath) {
     for (const candidate of candidates) {
         try {
             if (candidate.seconds > 900) continue;
-            const cmd = `"${bin}" -f "bv*+ba/b" --merge-output-format mp4 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${candidate.url}"`;
-            await execPromise(cmd, { timeout: 120000 });
+            const cmd = `-f "bv*+ba/b" --merge-output-format mp4 --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${candidate.url}"`;
+            await runYtDlp(cmd, 120000);
             if (fs.existsSync(outputPath)) {
                 return {
                     title: candidate.title,
@@ -135,12 +150,11 @@ async function downloadVideo(query, outputPath) {
 }
 
 async function downloadMediaGeneric(url, outputPath, format = 'video') {
-    const bin = getYtDlpBinary();
     const cookies = getCookiesArg();
     const jsRuntime = getJsRuntimeArg();
     const formatArg = format === 'audio' ? '-x --audio-format mp3' : '-f "bv*+ba/b" --merge-output-format mp4';
-    const cmd = `"${bin}" ${formatArg} --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${url}"`;
-    await execPromise(cmd, { timeout: 120000 });
+    const cmd = `${formatArg} --no-playlist --force-overwrites ${cookies} ${jsRuntime} -o "${outputPath}" "${url}"`;
+    await runYtDlp(cmd, 120000);
     if (!fs.existsSync(outputPath)) {
         throw new Error('Falha no download da mídia.');
     }

@@ -18,6 +18,7 @@ async function run(conn, msg, config, args, sender, senderName) {
         `${prefix}div`,
         `${prefix}setdiv`,
         `${prefix}reiniciar`,
+        `${prefix}update`,
         `${prefix}desligar`,
         `${prefix}ligar`
     ];
