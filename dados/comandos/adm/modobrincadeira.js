@@ -1,4 +1,3 @@
-// creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const { isUserAdmin } = require('../../funções/normalizarid');
 const { isOwnerSender } = require('../../funções/ownerAuth');
@@ -17,8 +16,9 @@ async function run(conn, msg, config, args, sender, senderName) {
 
     try {
         const groupMetadata = await conn.groupMetadata(from).catch(() => null);
-        const isAdmin = groupMetadata ? isUserAdmin(groupMetadata, sender) : false;
-        const isOwner = isOwnerSender(config, sender, msg);
+        const rawSender = msg.key?.participant || sender;
+        const isAdmin = groupMetadata ? (isUserAdmin(groupMetadata, sender, conn) || isUserAdmin(groupMetadata, rawSender, conn)) : false;
+        const isOwner = isOwnerSender(config, sender, msg, conn);
 
         if (!isAdmin && !isOwner) {
             return await conn.sendMessage(from, { 

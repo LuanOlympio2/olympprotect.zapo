@@ -8,8 +8,12 @@ async function run(conn, msg, config, args, sender) {
     if (!from.endsWith('@g.us')) {
         return await conn.sendMessage(from, { text: '❌ Esse comando só funciona em grupos.' }, { quoted: msg });
     }
-    const groupMetadata = await conn.groupMetadata(from);
-    if (!isUserAdmin(groupMetadata, sender)) {
+    const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+    if (!groupMetadata) {
+        return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+    }
+    const rawSender = msg.key?.participant || sender;
+    if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
         return await conn.sendMessage(from, { text: '❌ Apenas administradores podem remover advertência.' }, { quoted: msg });
     }
     let target;
@@ -17,11 +21,19 @@ async function run(conn, msg, config, args, sender) {
         target = msg.message.extendedTextMessage.contextInfo.mentionedJid[0];
     } else if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
         target = msg.message.extendedTextMessage.contextInfo.participant;
+    } else if (args[0]) {
+        const cleanArg = args[0].replace(/[^0-9]/g, '');
+        if (cleanArg.length >= 7) {
+            target = `${cleanArg}@s.whatsapp.net`;
+        }
     }
     if (!target) {
-        return await conn.sendMessage(from, { text: '⚠️ Marque alguém ou responda a mensagem dele para remover a advertência.' }, { quoted: msg });
+        return await conn.sendMessage(from, { text: `⚠️ Marque alguém, responda a mensagem ou use: ${config.prefix}rmadv 551199999999` }, { quoted: msg });
     }
-    const targetId = normalizeId(target);
+    const { findParticipant } = require('../../funções/normalizarid');
+    const targetParticipant = findParticipant(groupMetadata.participants, target);
+    const targetPhone = targetParticipant?.phoneNumber || (!String(target).includes('@lid') ? target : null);
+    const targetId = normalizeId(targetPhone || target);
     try {
         const grupoDB = await Grupo.findOne({ groupId: from });
         if (!grupoDB?.advertencias?.length) {

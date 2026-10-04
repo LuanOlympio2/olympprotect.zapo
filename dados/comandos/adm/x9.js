@@ -1,4 +1,3 @@
-// creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const groupCache = require('../../funções/groupCache');
 const { isUserAdmin } = require('../../funções/normalizarid');
@@ -18,9 +17,13 @@ module.exports = {
                 return await conn.sendMessage(from, { text: '❌ Esse comando só faz sentido dentro de grupos.' }, { quoted: msg });
             }
 
-            const groupMetadata = await conn.groupMetadata(from);
-            const isAdmin = isUserAdmin(groupMetadata, sender);
-            const isOwner = isOwnerSender(config, sender, msg);
+            const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+            if (!groupMetadata) {
+                return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+            }
+            const rawSender = msg.key?.participant || sender;
+            const isAdmin = isUserAdmin(groupMetadata, sender, conn) || isUserAdmin(groupMetadata, rawSender, conn);
+            const isOwner = isOwnerSender(config, sender, msg, conn);
 
             if (!isAdmin && !isOwner) {
                 return await conn.sendMessage(from, { text: '❌ Apenas administradores ou o dono do bot podem ligar o X9.' }, { quoted: msg });

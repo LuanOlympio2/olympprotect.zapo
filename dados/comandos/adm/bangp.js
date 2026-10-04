@@ -1,4 +1,3 @@
-// creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const { isUserAdmin } = require('../../funções/normalizarid');
 const groupCache = require('../../funções/groupCache');
@@ -13,8 +12,12 @@ module.exports = {
             return conn.sendMessage(from, { text: '❌ Esse comando só funciona em grupos.' }, { quoted: msg });
         }
         try {
-            const metadata = await conn.groupMetadata(from);
-            if (!isUserAdmin(metadata, sender)) {
+            const metadata = await conn.groupMetadata(from).catch(() => null);
+            if (!metadata) {
+                return conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+            }
+            const rawSender = msg.key?.participant || sender;
+            if (!isUserAdmin(metadata, sender, conn) && !isUserAdmin(metadata, rawSender, conn)) {
                 return conn.sendMessage(from, { text: '❌ Apenas administradores podem ativar o BangP.' }, { quoted: msg });
             }
             let grupo = await Grupo.findOne({ groupId: from });

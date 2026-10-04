@@ -8,8 +8,12 @@ async function run(conn, msg, config, args, sender) {
     if (!from.endsWith('@g.us')) {
         return await conn.sendMessage(from, { text: '❌ Esse comando só funciona em grupos.' }, { quoted: msg });
     }
-    const groupMetadata = await conn.groupMetadata(from);
-    if (!isUserAdmin(groupMetadata, sender)) {
+    const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+    if (!groupMetadata) {
+        return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+    }
+    const rawSender = msg.key?.participant || sender;
+    if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
         return await conn.sendMessage(from, { text: '❌ Apenas administradores podem aplicar advertência.' }, { quoted: msg });
     }
     let target;
@@ -17,15 +21,28 @@ async function run(conn, msg, config, args, sender) {
         target = msg.message.extendedTextMessage.contextInfo.mentionedJid[0];
     } else if (msg.message?.extendedTextMessage?.contextInfo?.participant) {
         target = msg.message.extendedTextMessage.contextInfo.participant;
+    } else if (args[0]) {
+        const cleanArg = args[0].replace(/[^0-9]/g, '');
+        if (cleanArg.length >= 7) {
+            target = `${cleanArg}@s.whatsapp.net`;
+        }
     }
     if (!target) {
-        return await conn.sendMessage(from, { text: '⚠️ Marque alguém ou responda a mensagem dele para advertir.' }, { quoted: msg });
+        return await conn.sendMessage(from, { text: `⚠️ Marque alguém, responda a mensagem ou use: ${config.prefix}adv 551199999999` }, { quoted: msg });
     }
-    const targetId = normalizeId(target);
-    const botId = normalizeId(conn.user.id);
-    if (targetId === botId) {
+    const { compareIds, findParticipant, isBotNumber } = require('../../funções/normalizarid');
+    if (compareIds(target, sender) || compareIds(target, rawSender)) {
+        return await conn.sendMessage(from, { text: '❌ Você não pode advertir a si mesmo.' }, { quoted: msg });
+    }
+    if (isBotNumber(target, conn)) {
         return await conn.sendMessage(from, { text: '❌ Eu não posso me advertir.' }, { quoted: msg });
     }
+    const targetParticipant = findParticipant(groupMetadata.participants, target);
+    if (targetParticipant && (['admin', 'superadmin'].includes(targetParticipant.admin) || targetParticipant.isAdmin === true || targetParticipant.isSuperAdmin === true)) {
+        return await conn.sendMessage(from, { text: '❌ Não é possível advertir outro administrador.' }, { quoted: msg });
+    }
+    const targetPhone = targetParticipant?.phoneNumber || (!String(target).includes('@lid') ? target : null);
+    const targetId = normalizeId(targetPhone || target);
     try {
         let grupoDB = await Grupo.findOne({ groupId: from });
         if (!grupoDB) {
@@ -41,7 +58,7 @@ async function run(conn, msg, config, args, sender) {
         }
         userWarn.count += 1;
         if (userWarn.count >= 3) {
-            if (!isBotAdmin(groupMetadata, conn.user.id)) {
+            if (!isBotAdmin(groupMetadata, conn)) {
                 await conn.sendMessage(from, {
                     text: '⚠️ O alvo chegou em 3 advertências, mas eu ainda não sou admin para remover.'
                 }, { quoted: msg });

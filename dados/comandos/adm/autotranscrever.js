@@ -1,4 +1,3 @@
-// creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const groupCache = require('../../funções/groupCache');
 const { isUserAdmin } = require('../../funções/normalizarid');
@@ -18,7 +17,9 @@ async function run(conn, msg, config, args, sender, senderName) {
 
     try {
         const groupMetadata = await conn.groupMetadata(from).catch(() => null);
-        if (groupMetadata && !isUserAdmin(groupMetadata, sender)) {
+        const rawSender = msg.key?.participant || sender;
+        const isAdmin = groupMetadata ? (isUserAdmin(groupMetadata, sender, conn) || isUserAdmin(groupMetadata, rawSender, conn)) : false;
+        if (groupMetadata && !isAdmin) {
             return await conn.sendMessage(from, {
                 text: '❌ Apenas administradores do grupo podem alterar essa configuração!'
             }, { quoted: msg });

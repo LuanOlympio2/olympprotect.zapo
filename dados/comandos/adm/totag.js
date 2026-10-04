@@ -1,5 +1,4 @@
-// creditos Olympio
-const { findParticipant, isUserAdmin } = require('../../funções/normalizarid');
+const { isUserAdmin, getMentionJids } = require('../../funções/normalizarid');
 const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const aliases = ['totag', 'hidetag', 'cita'];
 const downloadMedia = async (message, type) => {
@@ -22,12 +21,21 @@ async function run(conn, msg, config, args, sender, senderName) {
         return await conn.sendMessage(from, { text: 'Este comando só funciona em grupos!' }, { quoted: msg });
     }
     try {
-        const groupMetadata = await conn.groupMetadata(from);
-        const participants = groupMetadata.participants;
-        if (!isUserAdmin(groupMetadata, sender, conn)) {
+        const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+        if (!groupMetadata) {
+            return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+        }
+        const participants = groupMetadata.participants || [];
+        const rawSender = msg.key?.participant || sender;
+        if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
             return await conn.sendMessage(from, { text: 'Apenas administradores podem usar este comando!' }, { quoted: msg });
         }
-        const mentions = participants.map(({ id }) => id);
+        const mentionsSet = new Set();
+        participants.forEach((p) => {
+            const pId = p.id || p.jid;
+            getMentionJids(pId, participants).forEach((m) => mentionsSet.add(m));
+        });
+        const mentions = Array.from(mentionsSet);
         const quotedMsg = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
         if (quotedMsg) {
             const imageMessage = quotedMsg.imageMessage || quotedMsg.viewOnceMessage?.message?.imageMessage || quotedMsg.viewOnceMessageV2?.message?.imageMessage;
@@ -91,7 +99,7 @@ async function run(conn, msg, config, args, sender, senderName) {
                 });
             } else {
                 await conn.sendMessage(from, {
-                    text: 'Marcação do grupo! (Mídia não suportada para reenvio)',
+                    text: 'Marcação do grupo!',
                     mentions: mentions
                 });
             }

@@ -1,4 +1,3 @@
-// creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const { isUserAdmin, isBotAdmin } = require('../../funções/normalizarid');
 const groupCache = require('../../funções/groupCache');
@@ -9,11 +8,15 @@ async function run(conn, msg, config, args, sender, senderName) {
         return await conn.sendMessage(from, { text: '❌ Este comando só funciona em grupos!' }, { quoted: msg });
     }
     try {
-        const groupMetadata = await conn.groupMetadata(from);
-        if (!isUserAdmin(groupMetadata, sender)) {
+        const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+        if (!groupMetadata) {
+            return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+        }
+        const rawSender = msg.key?.participant || sender;
+        if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
             return await conn.sendMessage(from, { text: '❌ Apenas administradores podem usar este comando!' }, { quoted: msg });
         }
-        if (!isBotAdmin(groupMetadata, conn.user.id)) {
+        if (!isBotAdmin(groupMetadata, conn)) {
             return await conn.sendMessage(from, {
                 text: '⚠️ *Atenção:* Eu preciso ser Administrador do grupo para que o Anti-Fake funcione (banir usuários)!\n\nMe dê admin e tente novamente.'
             }, { quoted: msg });

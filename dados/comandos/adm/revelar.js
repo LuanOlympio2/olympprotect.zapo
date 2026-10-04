@@ -1,4 +1,3 @@
-// creditos Olympio
 const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const { isUserAdmin } = require('../../funções/normalizarid');
 const aliases = ['revelar', 'reveal', 'ver'];
@@ -7,15 +6,18 @@ async function run(conn, msg, config, args, sender, senderName) {
     if (!from.endsWith('@g.us')) {
         return await conn.sendMessage(from, { text: '❌ Este comando só funciona em grupos!' }, { quoted: msg });
     }
-    const groupMetadata = await conn.groupMetadata(from);
-    if (!isUserAdmin(groupMetadata, sender)) {
+    const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+    if (!groupMetadata) {
+        return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+    }
+    const rawSender = msg.key?.participant || sender;
+    if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
         return await conn.sendMessage(from, { text: '❌ Apenas administradores podem usar este comando!' }, { quoted: msg });
     }
     const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
     if (!quoted) {
         return await conn.sendMessage(from, { text: '⚠️ Responda a uma mensagem de visualização única para revelá-la.' }, { quoted: msg });
     }
-    console.log('[DEBUG REVELAR] Quoted Message:', JSON.stringify(quoted, null, 2));
     const viewOnceMessage = quoted.viewOnceMessage || quoted.viewOnceMessageV2 || quoted.viewOnceMessageV2Extension;
     const isDirectViewOnce = (quoted.imageMessage && quoted.imageMessage.viewOnce) || (quoted.videoMessage && quoted.videoMessage.viewOnce);
     if (!viewOnceMessage && !isDirectViewOnce) {

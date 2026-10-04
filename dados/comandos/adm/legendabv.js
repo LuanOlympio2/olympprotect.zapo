@@ -1,4 +1,3 @@
-// creditos Olympio
 const Grupo = require('../../modelos/grupos');
 const { isUserAdmin } = require('../../funções/normalizarid');
 const groupCache = require('../../funções/groupCache');
@@ -9,8 +8,12 @@ async function run(conn, msg, config, args, sender) {
         return await conn.sendMessage(from, { text: '❌ Esse comando só funciona em grupos.' }, { quoted: msg });
     }
     try {
-        const groupMetadata = await conn.groupMetadata(from);
-        if (!isUserAdmin(groupMetadata, sender)) {
+        const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+        if (!groupMetadata) {
+            return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+        }
+        const rawSender = msg.key?.participant || sender;
+        if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
             return await conn.sendMessage(from, { text: '❌ Apenas administradores podem mudar a legenda de boas-vindas.' }, { quoted: msg });
         }
         const novaLegenda = args.join(' ');

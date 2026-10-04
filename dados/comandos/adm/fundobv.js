@@ -1,4 +1,3 @@
-// creditos Olympio
 const fs = require('fs-extra');
 const path = require('path');
 const { downloadContentFromMessage } = require('../../funções/mediaUtils');
@@ -15,8 +14,12 @@ async function run(conn, msg, config, args, sender) {
     }
 
     try {
-        const groupMetadata = await conn.groupMetadata(from);
-        if (!isUserAdmin(groupMetadata, sender)) {
+        const groupMetadata = await conn.groupMetadata(from).catch(() => null);
+        if (!groupMetadata) {
+            return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+        }
+        const rawSender = msg.key?.participant || sender;
+        if (!isUserAdmin(groupMetadata, sender, conn) && !isUserAdmin(groupMetadata, rawSender, conn)) {
             return await conn.sendMessage(from, { text: '❌ Apenas administradores podem alterar a imagem de boas-vindas.' }, { quoted: msg });
         }
 

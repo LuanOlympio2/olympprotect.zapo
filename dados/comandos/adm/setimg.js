@@ -1,6 +1,6 @@
-// creditos Olympio
 const { downloadContentFromMessage } = require('../../funções/mediaUtils');
 const { isUserAdmin, isBotAdmin } = require('../../funções/normalizarid');
+const groupCache = require('../../funções/groupCache');
 module.exports = {
     name: 'setimg',
     aliases: ['setimg', 'setpp', 'setfotogp'],
@@ -12,11 +12,15 @@ module.exports = {
             return conn.sendMessage(from, { text: '❌ Esse comando só funciona em grupos.' }, { quoted: msg });
         }
         try {
-            const metadata = await conn.groupMetadata(from);
-            if (!isUserAdmin(metadata, sender)) {
+            const metadata = await conn.groupMetadata(from).catch(() => null);
+            if (!metadata) {
+                return conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+            }
+            const rawSender = msg.key?.participant || sender;
+            if (!isUserAdmin(metadata, sender, conn) && !isUserAdmin(metadata, rawSender, conn)) {
                 return conn.sendMessage(from, { text: '❌ Apenas administradores podem trocar a imagem do grupo.' }, { quoted: msg });
             }
-            if (!isBotAdmin(metadata, conn.user.id)) {
+            if (!isBotAdmin(metadata, conn)) {
                 return conn.sendMessage(from, { text: '❌ Eu preciso ser admin para trocar a imagem do grupo.' }, { quoted: msg });
             }
             const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
@@ -30,7 +34,8 @@ module.exports = {
                 buffer = Buffer.concat([buffer, chunk]);
             }
             await conn.updateProfilePicture(from, buffer);
-            await conn.sendMessage(from, { text: '✅ Imagem do grupo atualizada.' }, { quoted: msg });
+            groupCache.del(from);
+            await conn.sendMessage(from, { text: '✅ Imagem do grupo atualizada com sucesso.' }, { quoted: msg });
         } catch (e) {
             console.error('Erro no comando setimg:', e);
             await conn.sendMessage(from, { text: '❌ Erro ao trocar a imagem do grupo.' }, { quoted: msg });
