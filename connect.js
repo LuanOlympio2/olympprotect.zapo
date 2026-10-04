@@ -33,7 +33,18 @@ async function connectToWhatsApp() {
     console.log("🔄 Iniciando módulo de conexão com Zapo...");
 
     const sqlitePath = path.resolve(__dirname, 'auth_zapo/state.sqlite');
-    const sqlite = createSqliteStore({ path: sqlitePath });
+    let sqliteDriver = 'auto';
+    try {
+        const bs = require('better-sqlite3');
+        new bs(':memory:').close();
+        sqliteDriver = 'better-sqlite3';
+    } catch (_) {
+        try {
+            require('node:sqlite');
+            sqliteDriver = 'node';
+        } catch (_) {}
+    }
+    const sqlite = createSqliteStore({ path: sqlitePath, driver: sqliteDriver });
     const store = createStore({
         backends: { sqlite },
         providers: {
