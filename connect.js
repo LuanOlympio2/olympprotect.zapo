@@ -4,6 +4,7 @@ if (!globalThis.WebSocket) {
 }
 const readline = require("readline");
 const path = require('path');
+const fs = require('fs-extra');
 let qrcode = null;
 try {
     qrcode = require('qrcode-terminal');
@@ -32,7 +33,9 @@ const undecryptedBurstMap = new Map();
 async function connectToWhatsApp() {
     console.log("🔄 Iniciando módulo de conexão com Zapo...");
 
-    const sqlitePath = path.resolve(__dirname, 'auth_zapo/state.sqlite');
+    const authDir = path.resolve(__dirname, 'auth_zapo');
+    fs.ensureDirSync(authDir);
+    const sqlitePath = path.join(authDir, 'state.sqlite');
     let sqliteDriver = 'auto';
     try {
         const bs = require('better-sqlite3');

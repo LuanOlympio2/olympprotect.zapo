@@ -3,7 +3,10 @@ const { downloadContentFromMessage } = require('./mediaUtils');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs-extra');
 const path = require('path');
-const sharp = require('sharp');
+let sharp = null;
+try {
+    sharp = require('sharp');
+} catch (_) {}
 const webp = require('node-webpmux');
 
 function extractQuotedMessage(msg) {

@@ -4,7 +4,10 @@ const { exec } = require('child_process');
 const { promisify } = require('util');
 const fs = require('fs-extra');
 const path = require('path');
-const sharp = require('sharp');
+let sharp = null;
+try {
+    sharp = require('sharp');
+} catch (_) {}
 const execPromise = promisify(exec);
 const aliases = ['togif', 'gif', 'tomp4'];
 async function run(conn, msg, config, args, sender, senderName) {
