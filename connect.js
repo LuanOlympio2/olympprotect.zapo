@@ -99,6 +99,12 @@ async function connectToWhatsApp() {
     const conn = createZapoAdapter(client);
     global.botConn = conn;
 
+    try {
+        await client.auth.loadOrCreateCredentials();
+    } catch (e) {
+        console.warn("Aviso ao carregar credenciais:", e?.message || e);
+    }
+
     const state = client.getState();
     const isRegistered = Boolean(state.registered || client.getCredentials()?.meJid);
 
@@ -114,6 +120,16 @@ async function connectToWhatsApp() {
                 usePairing = true;
                 phoneNumber = await question("Digite o número com DDD (ex: 551199999999): ");
                 phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
+                if (phoneNumber) {
+                    try {
+                        const cfgPath = path.resolve(process.cwd(), 'config.json');
+                        if (fs.existsSync(cfgPath)) {
+                            const cfg = fs.readJsonSync(cfgPath);
+                            cfg.phoneNumber = phoneNumber;
+                            fs.writeJsonSync(cfgPath, cfg, { spaces: 2 });
+                        }
+                    } catch (_) {}
+                }
             }
         }
     }
@@ -140,6 +156,20 @@ async function connectToWhatsApp() {
         if (event.status === 'open') {
             console.log("✅ Conectado com sucesso ao WhatsApp via Zapo!");
             conn.ev.emit('connection.update', { connection: 'open' });
+            try {
+                const creds = client.getCredentials();
+                const myNumber = creds?.meJid ? creds.meJid.split('@')[0].split(':')[0] : null;
+                if (myNumber) {
+                    const cfgPath = path.resolve(process.cwd(), 'config.json');
+                    if (fs.existsSync(cfgPath)) {
+                        const cfg = fs.readJsonSync(cfgPath);
+                        if (!cfg.phoneNumber) {
+                            cfg.phoneNumber = myNumber;
+                            fs.writeJsonSync(cfgPath, cfg, { spaces: 2 });
+                        }
+                    }
+                }
+            } catch (_) {}
         } else if (event.status === 'connecting') {
             console.log("🔄 Conectando ao WhatsApp via Zapo...");
             conn.ev.emit('connection.update', { connection: 'connecting' });
