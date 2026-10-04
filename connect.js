@@ -2,6 +2,22 @@
 if (!globalThis.WebSocket) {
     globalThis.WebSocket = require('ws');
 }
+const origConsoleInfo = console.info;
+console.info = (...args) => {
+    if (typeof args[0] === 'string' && (args[0].includes('history sync chunk') || args[0].includes('decoded history'))) {
+        return;
+    }
+    origConsoleInfo.apply(console, args);
+};
+
+const origConsoleLog = console.log;
+console.log = (...args) => {
+    if (typeof args[0] === 'string' && (args[0].includes('history sync chunk') || args[0].includes('decoded history'))) {
+        return;
+    }
+    origConsoleLog.apply(console, args);
+};
+
 const readline = require("readline");
 const path = require('path');
 const fs = require('fs-extra');
@@ -65,10 +81,20 @@ async function connectToWhatsApp() {
         }
     });
 
+    const zapoLogger = {
+        level: 'warn',
+        trace: () => {},
+        debug: () => {},
+        info: () => {},
+        warn: () => {},
+        error: (msg, ctx) => console.error('[ZAPO]', msg, ctx || ''),
+        child: () => zapoLogger
+    };
+
     const client = new WaClient({
         sessionId: 'olympprotect',
         store
-    });
+    }, zapoLogger);
 
     const conn = createZapoAdapter(client);
     global.botConn = conn;

@@ -2,6 +2,22 @@
 if (!globalThis.WebSocket) {
     globalThis.WebSocket = require('ws');
 }
+const origConsoleInfo = console.info;
+console.info = (...args) => {
+    if (typeof args[0] === 'string' && (args[0].includes('history sync chunk') || args[0].includes('decoded history'))) {
+        return;
+    }
+    origConsoleInfo.apply(console, args);
+};
+
+const origConsoleLog = console.log;
+console.log = (...args) => {
+    if (typeof args[0] === 'string' && (args[0].includes('history sync chunk') || args[0].includes('decoded history'))) {
+        return;
+    }
+    origConsoleLog.apply(console, args);
+};
+
 const connectToWhatsApp = require('./connect');
 const cleanTempFolder = require('./cleaner');
 const fs = require('fs');
