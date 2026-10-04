@@ -285,7 +285,7 @@ async function mensagensHandler(conn, m, config) {
                     senderNumber = normalizeId(sender);
                     isOwner = isOwner || isOwnerSender(config, sender, msg, conn);
                 }
-                isBotAd = isBotAdmin(groupMetadata, conn.user.id);
+                isBotAd = isBotAdmin(groupMetadata, conn);
                 isUserAd = isUserAdmin(groupMetadata, sender, conn) || isUserAdmin(groupMetadata, rawSender, conn);
             } catch (e) {
                 console.error('Erro ao carregar dados do grupo:', e);
@@ -618,7 +618,7 @@ async function mensagensHandler(conn, m, config) {
                             const freshMetadata = groupMetadataManager.get(from) || await conn.groupMetadata(from).catch(() => null);
                             if (freshMetadata) {
                                 groupMetadataManager.set(from, freshMetadata);
-                                isUserAd = isUserAdmin(freshMetadata, sender, conn);
+                                isUserAd = isUserAdmin(freshMetadata, sender, conn) || isUserAdmin(freshMetadata, rawSender, conn);
                                 if (isUserAd) {
                                     groupCache.set(from, {
                                         metadata: freshMetadata,

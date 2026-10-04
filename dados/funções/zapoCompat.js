@@ -10,9 +10,11 @@ function createZapoAdapter(client) {
         get user() {
             const creds = client.getCredentials();
             const meJid = creds?.meJid || '';
+            const meLid = creds?.meLid || '';
             return {
                 id: meJid,
                 jid: meJid,
+                lid: meLid,
                 name: 'OlympProtect'
             };
         },
@@ -109,6 +111,7 @@ function createZapoAdapter(client) {
         },
         async groupMetadata(jid) {
             const meta = await client.group.queryGroupMetadata(jid);
+            const lidCache = require('./lidCache');
             return {
                 id: meta.jid,
                 subject: meta.subject,
@@ -121,26 +124,50 @@ function createZapoAdapter(client) {
                 restrict: !!meta.restrict,
                 announce: !!meta.announce,
                 size: meta.size || meta.participants?.length || 0,
-                participants: (meta.participants || []).map(p => ({
-                    id: p.jid,
-                    admin: p.isSuperAdmin ? 'superadmin' : (p.isAdmin ? 'admin' : null),
-                    lid: p.lid,
-                    phoneNumber: p.phoneNumber
-                }))
+                participants: (meta.participants || []).map(p => {
+                    const id = p.jid;
+                    const phone = p.phoneNumber || (!p.jid?.includes('@lid') ? p.jid : null);
+                    const lid = p.lid || (p.jid?.includes('@lid') ? p.jid : null);
+                    if (phone && lid) {
+                        const cleanPhone = phone.includes('@') ? phone : `${phone.split(':')[0]}@s.whatsapp.net`;
+                        lidCache.set(cleanPhone, lid);
+                    }
+                    return {
+                        id,
+                        admin: p.isSuperAdmin ? 'superadmin' : (p.isAdmin ? 'admin' : null),
+                        lid,
+                        phoneNumber: phone
+                    };
+                })
             };
         },
         async groupParticipantsUpdate(jid, participants, action) {
-            const list = Array.isArray(participants) ? participants : [participants];
+            let list = Array.isArray(participants) ? [...participants] : [participants];
+            try {
+                const meta = await client.group.queryGroupMetadata(jid).catch(() => null);
+                if (meta && Array.isArray(meta.participants)) {
+                    list = list.map(target => {
+                        const targetNorm = String(target).split('@')[0].split(':')[0];
+                        const match = meta.participants.find(p => {
+                            const pNorm = String(p.jid).split('@')[0].split(':')[0];
+                            const pPhoneNorm = p.phoneNumber ? String(p.phoneNumber).split('@')[0].split(':')[0] : null;
+                            const pLidNorm = p.lid ? String(p.lid).split('@')[0].split(':')[0] : null;
+                            return pNorm === targetNorm || (pPhoneNorm && pPhoneNorm === targetNorm) || (pLidNorm && pLidNorm === targetNorm);
+                        });
+                        return match?.jid || target;
+                    });
+                }
+            } catch (_) {}
             if (action === 'remove') return await client.group.removeParticipants(jid, list);
             if (action === 'add') return await client.group.addParticipants(jid, list);
             if (action === 'promote') return await client.group.promoteParticipants(jid, list);
             if (action === 'demote') return await client.group.demoteParticipants(jid, list);
         },
         async groupSettingUpdate(jid, setting) {
-            if (setting === 'announcement') return await client.group.setSetting(jid, 'announce', true);
-            if (setting === 'not_announcement') return await client.group.setSetting(jid, 'announce', false);
-            if (setting === 'locked') return await client.group.setSetting(jid, 'restrict', true);
-            if (setting === 'unlocked') return await client.group.setSetting(jid, 'restrict', false);
+            if (setting === 'announcement' || setting === 'announce') return await client.group.setSetting(jid, 'announcement', true);
+            if (setting === 'not_announcement' || setting === 'not_announce') return await client.group.setSetting(jid, 'announcement', false);
+            if (setting === 'locked' || setting === 'restrict') return await client.group.setSetting(jid, 'restrict', true);
+            if (setting === 'unlocked' || setting === 'not_restrict') return await client.group.setSetting(jid, 'restrict', false);
         },
         async groupUpdateSubject(jid, subject) {
             return await client.group.setSubject(jid, subject);

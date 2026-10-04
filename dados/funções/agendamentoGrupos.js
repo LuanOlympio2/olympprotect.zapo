@@ -38,8 +38,7 @@ function startGroupScheduler(conn) {
                     if (lastRunOpen !== dataBrasilia) {
                         try {
                             const metadata = groupMetadataManager.get(grupo.groupId) || await conn.groupMetadata(grupo.groupId).catch(() => null);
-                            const botId = conn.user?.id;
-                            if (metadata && isBotAdmin(metadata, botId)) {
+                            if (metadata && isBotAdmin(metadata, conn)) {
                                 await conn.groupSettingUpdate(grupo.groupId, 'not_announcement');
 
                                 const card = buildActionCard({
@@ -75,8 +74,7 @@ function startGroupScheduler(conn) {
                     if (lastRunClose !== dataBrasilia) {
                         try {
                             const metadata = groupMetadataManager.get(grupo.groupId) || await conn.groupMetadata(grupo.groupId).catch(() => null);
-                            const botId = conn.user?.id;
-                            if (metadata && isBotAdmin(metadata, botId)) {
+                            if (metadata && isBotAdmin(metadata, conn)) {
                                 await conn.groupSettingUpdate(grupo.groupId, 'announcement');
 
                                 const card = buildActionCard({

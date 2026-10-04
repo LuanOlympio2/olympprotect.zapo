@@ -13,12 +13,23 @@ function normalizeId(id) {
 
 function compareIds(id1, id2) {
     if (!id1 || !id2) return false;
-    return normalizeId(id1) === normalizeId(id2);
+    const norm1 = normalizeId(id1);
+    const norm2 = normalizeId(id2);
+    if (norm1 && norm2 && norm1 === norm2) return true;
+    const lid1 = normalizeId(lidCache.getLid(id1));
+    const jid1 = normalizeId(lidCache.getJid(id1));
+    const lid2 = normalizeId(lidCache.getLid(id2));
+    const jid2 = normalizeId(lidCache.getJid(id2));
+    if (lid1 && (lid1 === norm2 || lid1 === lid2)) return true;
+    if (jid1 && (jid1 === norm2 || jid1 === jid2)) return true;
+    if (lid2 && norm1 === lid2) return true;
+    if (jid2 && norm1 === jid2) return true;
+    return false;
 }
 
 function getBotIds(conn = null) {
     const ids = new Set();
-    const activeConn = conn || global.botConn;
+    const activeConn = (conn && typeof conn === 'object') ? conn : global.botConn;
     if (activeConn?.user) {
         if (activeConn.user.id) ids.add(normalizeId(activeConn.user.id));
         if (activeConn.user.lid) ids.add(normalizeId(activeConn.user.lid));
@@ -30,6 +41,7 @@ function getBotIds(conn = null) {
         const config = require('../../config.json');
         if (config.botNumber) ids.add(normalizeId(config.botNumber));
         if (config.botLid) ids.add(normalizeId(config.botLid));
+        if (config.phoneNumber) ids.add(normalizeId(config.phoneNumber));
     } catch (_) {}
 
     try {
@@ -90,31 +102,35 @@ function findParticipant(participants, targetId) {
     const targets = new Set([normTarget, cachedJid, cachedLid].filter(Boolean));
 
     const found = participants.find(p => {
-        const pId = normalizeId(p.id);
-        const pLid = p.lid ? normalizeId(p.lid) : null;
-        const pJid = normalizeId(lidCache.getJid(p.id));
-        const pLidFromCache = normalizeId(lidCache.getLid(p.id));
+        const pIdentifier = p.id || p.jid;
+        const pId = normalizeId(pIdentifier);
+        const pLid = normalizeId(p.lid || p.lidJid);
+        const pPhone = normalizeId(p.phoneNumber || p.phoneJid);
+        const pJid = normalizeId(lidCache.getJid(pIdentifier));
+        const pLidFromCache = normalizeId(lidCache.getLid(pIdentifier));
 
         return targets.has(pId) || 
                (pLid && targets.has(pLid)) || 
+               (pPhone && targets.has(pPhone)) || 
                (pJid && targets.has(pJid)) || 
                (pLidFromCache && targets.has(pLidFromCache));
     });
 
     if (found) {
-        const phone = found.phoneNumber || (!found.id?.includes('@lid') ? found.id : null);
-        const lid = found.lid || (found.id?.includes('@lid') ? found.id : null);
+        const pIdentifier = found.id || found.jid;
+        const phone = found.phoneNumber || found.phoneJid || (!String(pIdentifier).includes('@lid') ? pIdentifier : null);
+        const lid = found.lid || found.lidJid || (String(pIdentifier).includes('@lid') ? pIdentifier : null);
         if (phone && lid) {
-            const cleanPhone = phone.includes('@') ? phone : `${phone}@s.whatsapp.net`;
+            const cleanPhone = String(phone).includes('@') ? phone : `${phone}@s.whatsapp.net`;
             lidCache.set(cleanPhone, lid);
         }
         return found;
     }
 
     if (participants.length === 2 && String(targetId).includes('@lid')) {
-        const other = participants.find(p => p.id && !p.id.includes(':'));
+        const other = participants.find(p => (p.id || p.jid) && !String(p.id || p.jid).includes(':'));
         if (other) {
-            lidCache.set(other.id, targetId);
+            lidCache.set(other.id || other.jid, targetId);
             return other;
         }
     }
@@ -122,10 +138,13 @@ function findParticipant(participants, targetId) {
 }
 
 function isParticipantAdmin(groupMetadata, userId) {
-    if (!groupMetadata || !userId || !groupMetadata.participants) return false;
+    if (!groupMetadata || !userId) return false;
+    if (groupMetadata.owner && compareIds(groupMetadata.owner, userId)) return true;
+    if (groupMetadata.subjectOwner && compareIds(groupMetadata.subjectOwner, userId)) return true;
+    if (!groupMetadata.participants) return false;
     const participant = findParticipant(groupMetadata.participants, userId);
     if (!participant) return false;
-    return participant.admin === 'admin' || participant.admin === 'superadmin';
+    return participant.admin === 'admin' || participant.admin === 'superadmin' || participant.isAdmin === true || participant.isSuperAdmin === true;
 }
 
 function isUserAdmin(groupMetadata, userId, conn = null) {
@@ -139,21 +158,23 @@ function isBotAdmin(groupMetadata, botIdOrConn) {
     if (!groupMetadata || !groupMetadata.participants) return false;
 
     const idsToCheck = new Set();
+    const activeConn = (botIdOrConn && typeof botIdOrConn === 'object') ? botIdOrConn : global.botConn;
 
-    if (botIdOrConn && typeof botIdOrConn === 'object') {
-        if (botIdOrConn.user) {
-            if (botIdOrConn.user.id) idsToCheck.add(botIdOrConn.user.id);
-            if (botIdOrConn.user.lid) idsToCheck.add(botIdOrConn.user.lid);
+    if (activeConn) {
+        if (activeConn.user) {
+            if (activeConn.user.id) idsToCheck.add(normalizeId(activeConn.user.id));
+            if (activeConn.user.lid) idsToCheck.add(normalizeId(activeConn.user.lid));
         }
-        if (botIdOrConn.id) idsToCheck.add(botIdOrConn.id);
-        if (botIdOrConn.lid) idsToCheck.add(botIdOrConn.lid);
-    } else if (typeof botIdOrConn === 'string') {
-        idsToCheck.add(botIdOrConn);
+        if (activeConn.id) idsToCheck.add(normalizeId(activeConn.id));
+        if (activeConn.lid) idsToCheck.add(normalizeId(activeConn.lid));
+    }
+    if (typeof botIdOrConn === 'string') {
+        idsToCheck.add(normalizeId(botIdOrConn));
     }
 
-    const botIds = getBotIds(botIdOrConn);
+    const botIds = getBotIds(activeConn);
     for (const bId of botIds) {
-        idsToCheck.add(bId);
+        idsToCheck.add(normalizeId(bId));
     }
 
     for (const id of idsToCheck) {

@@ -18,20 +18,48 @@ async function run(conn, msg, config, args, sender, senderName) {
 
     try {
         const groupMetadata = await conn.groupMetadata(from).catch(() => null);
-        if (!groupMetadata || !isUserAdmin(groupMetadata, sender)) {
-            return await conn.sendMessage(from, { text: '❌ Apenas administradores podem configurar o agendamento do grupo!' }, { quoted: msg });
+        if (!groupMetadata) {
+            return await conn.sendMessage(from, { text: '❌ Erro ao obter dados do grupo.' }, { quoted: msg });
+        }
+
+        const rawSender = msg.key?.participant || sender;
+        const isAdmin = isUserAdmin(groupMetadata, sender, conn) || isUserAdmin(groupMetadata, rawSender, conn);
+        if (!isAdmin) {
+            return await conn.sendMessage(from, { text: '❌ Apenas administradores podem usar este comando!' }, { quoted: msg });
         }
 
         const rawArg = (args[0] || '').trim().toLowerCase();
 
-        if (!rawArg) {
+        if (!rawArg || ['agora', 'now', 'imediato'].includes(rawArg)) {
+            if (!isBotAdmin(groupMetadata, conn)) {
+                return await conn.sendMessage(from, { text: '❌ Preciso ser administrador para fechar o grupo!' }, { quoted: msg });
+            }
+            await conn.groupSettingUpdate(from, 'announcement');
+            const senderTag = sender.split('@')[0].split(':')[0];
+            const card = buildActionCard({
+                header: 'GESTÃO DO GRUPO',
+                headerIcon: '👥',
+                title: 'GRUPO FECHADO',
+                icon: '🔒',
+                lines: [
+                    `📢 *Status:* Fechado (Apenas Admins)`,
+                    `👥 *Grupo:* ${groupMetadata.subject || 'Grupo'}`,
+                    `👮 *Modificado por:* @${senderTag}`
+                ],
+                tip: `Apenas administradores podem enviar mensagens. Para agendar fechamento diário, use ${prefix}fechargp HH:MM (ex: ${prefix}fechargp 22:00).`
+            });
+            return await conn.sendMessage(from, { text: card, mentions: [sender, rawSender].filter(Boolean) }, { quoted: msg });
+        }
+
+        if (['info', 'status', 'ver'].includes(rawArg)) {
             let grupoDB = await Grupo.findOne({ groupId: from });
             const horarioAtual = grupoDB?.horarioFechar || 'Não configurado';
             return await conn.sendMessage(from, {
                 text: `⏰ *AGENDAMENTO PARA FECHAR O GRUPO*\n\n` +
                       `📌 *Horário atual:* ${horarioAtual}\n\n` +
                       `👉 *Como usar:*\n` +
-                      `• *${prefix}fechargp 22:00* (Define o horário de Brasília)\n` +
+                      `• *${prefix}fechargp* (Fecha o grupo agora)\n` +
+                      `• *${prefix}fechargp 22:00* (Define o horário de fechamento diário)\n` +
                       `• *${prefix}fechargp off* (Desativa o fechamento automático)`
             }, { quoted: msg });
         }
@@ -60,13 +88,13 @@ async function run(conn, msg, config, args, sender, senderName) {
                 tip: 'O grupo não será mais fechado automaticamente.'
             });
 
-            return await conn.sendMessage(from, { text: card, mentions: [sender] }, { quoted: msg });
+            return await conn.sendMessage(from, { text: card, mentions: [sender, rawSender].filter(Boolean) }, { quoted: msg });
         }
 
         const normalized = normalizeTime(rawArg);
         if (!normalized) {
             return await conn.sendMessage(from, {
-                text: `❌ Horário inválido! Use o formato de 24 horas *HH:MM* (Exemplo: *${prefix}fechargp 23:00*).`
+                text: `❌ Horário inválido! Use: \n• *${prefix}fechargp* para fechar o grupo agora\n• *${prefix}fechargp 23:00* para agendar horário diário\n• *${prefix}fechargp off* para desativar agendamento`
             }, { quoted: msg });
         }
 
@@ -86,17 +114,17 @@ async function run(conn, msg, config, args, sender, senderName) {
                 `👥 *Grupo:* ${groupMetadata.subject || 'Grupo'}`,
                 `👮 *Modificado por:* @${sender.split('@')[0].split(':')[0]}`
             ],
-            alert: !isBotAdmin(groupMetadata, conn.user?.id) 
+            alert: !isBotAdmin(groupMetadata, conn) 
                 ? 'Lembre-se de dar administrador ao bot para que ele possa fechar o grupo no horário!'
                 : '',
             tip: 'Todos os dias neste horário o grupo será fechado automaticamente (apenas administradores poderão enviar mensagens).'
         });
 
-        await conn.sendMessage(from, { text: card, mentions: [sender] }, { quoted: msg });
+        await conn.sendMessage(from, { text: card, mentions: [sender, rawSender].filter(Boolean) }, { quoted: msg });
 
     } catch (e) {
         console.error('Erro no comando fechargp:', e);
-        await conn.sendMessage(from, { text: '❌ Erro ao salvar o agendamento de fechamento.' }, { quoted: msg });
+        await conn.sendMessage(from, { text: '❌ Erro ao processar o comando de fechar grupo.' }, { quoted: msg });
     }
 }
 
