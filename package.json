@@ -1,7 +1,7 @@
 {
-  "name": "olympprotect",
+  "name": "olympprotect.zapo",
   "version": "1.0.0",
-  "description": "Bot WhatsApp OlympProtect",
+  "description": "Bot WhatsApp OlympProtect (Versão Zapo-JS)",
   "main": "olympindex.js",
   "type": "commonjs",
   "scripts": {

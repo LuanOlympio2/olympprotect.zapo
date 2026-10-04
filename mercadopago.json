@@ -1,0 +1,41 @@
+{
+  "mercadoPago": {
+    "accessToken": "",
+    "publicKey": "",
+    "webhookUrl": "",
+    "webhookPort": 3333
+  },
+  "planos": [
+    {
+      "id": 1,
+      "nome": "1 Mês",
+      "dias": 30,
+      "valor": 10
+    },
+    {
+      "id": 2,
+      "nome": "2 Meses",
+      "dias": 60,
+      "valor": 15
+    },
+    {
+      "id": 3,
+      "nome": "3 Meses",
+      "dias": 90,
+      "valor": 20
+    },
+    {
+      "id": 4,
+      "nome": "Vitalício",
+      "dias": 9999,
+      "valor": 50
+    }
+  ],
+  "mensagens": {
+    "menuHeader": "Planos de aluguel do bot",
+    "pagamentoGerado": "Pagamento PIX gerado.\n\nValor: R$ {valor}\nPlano: {plano}\n\nEscaneie o QR Code ou copie o codigo abaixo:",
+    "pagamentoConfirmado": "Pagamento confirmado.\n\nAluguel ativado por {dias} dias.\nExpira em: {expiracao}",
+    "semAluguel": "Este grupo está sem aluguel ativo.\nUse *!aluguel* para ver os planos disponíveis.",
+    "aluguelExpirado": "O aluguel deste grupo expirou.\nUse *!aluguel* para renovar."
+  }
+}

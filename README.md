@@ -1,6 +1,6 @@
-# OlympProtect - Bot de WhatsApp
+# OlympProtect.zapo - Bot de WhatsApp
 
-Bot de segurança e gerenciamento para WhatsApp de alta performance utilizando a biblioteca **Zapo** (`zapo-js`) com persistência em SQLite.
+Esta versão do OlympProtect utiliza exclusivamente a biblioteca **Zapo** (`zapo-js`) para a conexão com o WhatsApp, contando com persistência robusta em SQLite e gerenciamento de alta performance.
 
 ## Funcionalidades
 - Gerenciamento e moderação de grupos

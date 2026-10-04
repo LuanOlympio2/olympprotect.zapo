@@ -12,9 +12,6 @@ test_auth/
 baileys_store_multi.json
 
 # Arquivos de Configuração e Chaves Privadas
-config.json
-apis.json
-mercadopago.json
 apis.txt
 cookies.txt
 
@@ -39,3 +36,5 @@ Thumbs.db
 .sixth/
 .vscode/
 .idea/
+
+.credentials_backup.json
