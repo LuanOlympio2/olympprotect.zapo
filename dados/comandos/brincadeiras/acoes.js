@@ -43,7 +43,7 @@ async function sendMediaOrText(conn, from, msg, card, mentions, cmdKey) {
 
 async function run(conn, msg, config, args, sender, senderName) {
     const from = msg.key.remoteJid;
-    const prefix = config.prefix || '+';
+    const prefix = config.prefix || '!';
     const isGroup = from.endsWith('@g.us');
 
     const fullText = msg.message?.conversation || 

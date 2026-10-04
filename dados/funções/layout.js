@@ -421,11 +421,21 @@ async function getExtravagantSystemInfo(config, sender, from, msg, conn) {
         } catch (_) {}
     }
 
-    const prefix = config.prefix || '+';
+    let activeCfg = config;
+    try {
+        const fsExtra = require('fs-extra');
+        const pathExtra = require('path');
+        const cfgPath = pathExtra.resolve(process.cwd(), 'config.json');
+        if (fsExtra.existsSync(cfgPath)) {
+            activeCfg = fsExtra.readJsonSync(cfgPath);
+        }
+    } catch (_) {}
+
+    const prefix = activeCfg?.prefix || config?.prefix || '!';
     const systemInfo = [
         `👤 ${toBoldSerif('Usuario')}: @${cleanSender}`,
         `👑 ${toBoldSerif('Cargo')}: ${role}`,
-        `🔱 ${toBoldSerif('Dono')}: ${config.ownerName || "I'm Olympio"}`,
+        `🔱 ${toBoldSerif('Dono')}: ${activeCfg?.ownerName || config?.ownerName || "I'm Olympio"}`,
         `🔱 ${toBoldSerif('Prefixo')}: [ ${prefix} ]`
     ];
 

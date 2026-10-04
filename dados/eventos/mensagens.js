@@ -175,7 +175,14 @@ async function mensagensHandler(conn, m, config) {
         if (type !== 'notify') return;
         const msg = m.messages[0];
         if (!msg.message || msg.key.remoteJid === 'status@broadcast') return;
-        const prefix = config.prefix || '!';
+        let activeConfig = config;
+        try {
+            const cfgPath = path.resolve(process.cwd(), 'config.json');
+            if (fs.existsSync(cfgPath)) {
+                activeConfig = JSON.parse(fs.readFileSync(cfgPath, 'utf-8'));
+            }
+        } catch (_) {}
+        const prefix = activeConfig?.prefix || config?.prefix || '!';
         const from = msg.key.remoteJid;
         if (!from) return;
         if (msg.key?.id && msg.message) {
@@ -627,7 +634,7 @@ async function mensagensHandler(conn, m, config) {
                         }
                     }
                     console.log(`[EXEC] Executando comando ${prefix}${command} para ${senderName}`);
-                    await cmd.run(conn, msg, config, args, sender, senderName);
+                    await cmd.run(conn, msg, activeConfig, args, sender, senderName);
                     if (usuarioDB) {
                         usuarioDB.comandosUsados = (usuarioDB.comandosUsados || 0) + 1;
                         usuarioDB.save().catch(() => {});
@@ -655,7 +662,7 @@ async function mensagensHandler(conn, m, config) {
                 await safeSendMenu(conn, from, card, msg, []);
             }
         } else if (!isCommand && /^(?:prefixo[?!.]*|qual\s+(?:é\s+|e\s+)?(?:o\s+)?prefixo[?!.]*)$/i.test(fullText.trim())) {
-            const card = buildPrefixCard(prefix, config.botName || 'OlympProtect');
+            const card = buildPrefixCard(prefix, activeConfig?.botName || config?.botName || 'OlympProtect');
             await safeSendMenu(conn, from, card, msg, []);
         }
         if (isGroup && !isCommand && fullText && grupoConfig?.autobaixar) {
