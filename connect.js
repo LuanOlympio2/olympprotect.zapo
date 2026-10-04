@@ -4,7 +4,10 @@ if (!globalThis.WebSocket) {
 }
 const readline = require("readline");
 const path = require('path');
-const qrcode = require('qrcode-terminal');
+let qrcode = null;
+try {
+    qrcode = require('qrcode-terminal');
+} catch (_) {}
 const { createSqliteStore } = require('@zapo-js/store-sqlite');
 const { createStore, WaClient } = require('zapo-js');
 const { createZapoAdapter } = require('./dados/funções/zapoCompat');
@@ -60,21 +63,30 @@ async function connectToWhatsApp() {
     const isRegistered = Boolean(state.registered || client.getCredentials()?.meJid);
 
     let usePairing = false;
-    let phoneNumber = null;
+    let phoneNumber = (config.phoneNumber || config.pairingNumber || '').replace(/[^0-9]/g, '');
 
     if (!isRegistered) {
-        const choice = await question("Como deseja conectar?\n1. QR Code\n2. Código de Pareamento\n> ");
-        if (choice.trim() === '2') {
+        if (phoneNumber) {
             usePairing = true;
-            phoneNumber = await question("Digite o número (ex: 551199999999): ");
-            phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
+        } else {
+            const choice = await question("Como deseja conectar?\n1. QR Code\n2. Código de Pareamento\n> ");
+            if (choice.trim() === '2') {
+                usePairing = true;
+                phoneNumber = await question("Digite o número com DDD (ex: 551199999999): ");
+                phoneNumber = phoneNumber.replace(/[^0-9]/g, "");
+            }
         }
     }
 
     client.on('auth_qr', ({ qr }) => {
         if (!usePairing) {
-            console.log("\n📲 Escaneie o QR Code abaixo para conectar:");
-            qrcode.generate(qr, { small: true });
+            if (qrcode) {
+                console.log("\n📲 Escaneie o QR Code abaixo para conectar:");
+                qrcode.generate(qr, { small: true });
+            } else {
+                console.log("\n📲 QR Code disponível no socket.");
+                console.log("ℹ️ Para renderizar o QR gráfico no terminal, instale: npm install qrcode-terminal");
+            }
         }
     });
 
